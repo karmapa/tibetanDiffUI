@@ -1,21 +1,22 @@
 /* header */
 #bg {
-  background-image: linear-gradient(90deg, #FFFFFF 30%, #95FFF7 100%);
+  background: #EFF2E4;
 }
+
+
 
 #logoArea {
   background-color: transparent;
   display: flex;
   width: 100%;
   height: 10%;
-  padding-top: 32px;
   padding-left: 8px;
   padding-bottom: 40px
 }
 
 #logo {
   width: 100px;
-  height: 110px;  
+  height: 100px;
 }
 
 #logoTitle {
@@ -29,21 +30,8 @@
 #titleRight {
   flex: 5;
   text-align: right;
+  padding-top: 80px;
   padding-right: 16px;
-}
-
-#date {
-  padding-top: 36px; 
-  font-size: 22px;
-  color: #000000;
-}
-
-#userState {
-  padding-top: 8px;
-}
-
-#signOutbtn {
-
 }
 
 /* main */
@@ -53,59 +41,4 @@
   -webkit-justify-content: space-between;
   justify-content: space-between;
   height: 700px;
-}
-
-#aside {
-  flex: 1;
-  border-style: solid;
-  margin: 10px;
-  background-image: radial-gradient(40% 98%, #C7F0F2 0%, #81D7DB 100%);
-  
-}
-
-#asidebutton {
-  padding: 20px 0% 100px 50%;
-}
-
-.asidebtn1 {
-  display: none;
-  background-image: linear-gradient(-146deg, #E3F5FF 0%, #428BCA 0%);
-  border: 1px solid #357EBD;
-  border-color: #2e6da4;
-  font-size: 24px;
-  color: #FFFFFF;
-  width: 250px;
-  height: 46px;
-  margin-left: -125px
-}
-
-.asidebtn {
-  background-image: linear-gradient(-146deg, #E3F5FF 0%, #428BCA 0%);
-  border: 1px solid #357EBD;
-  border-color: #2e6da4;
-  font-size: 24px;
-  color: #FFFFFF;
-  width: 250px;
-  height: 46px;
-  margin-left: -125px
-}
-
-#mainRender {
-  flex: 3;
-  border-style: solid;
-  margin: 10px;
-  background-image: radial-gradient(40% 98%, #C7F0F2 0%, #81D7DB 100%);
-}
-
-#homeTitle {
-  font-size: 80px;
-  text-align: center;
-  padding-top: 240px;
-  letter-spacing: 30px;
-  padding-left: 30px;
-}
-
-#my-signin2 {
-  padding: 40px 0px 100px 50%;
-  margin-left: -150px;
 }

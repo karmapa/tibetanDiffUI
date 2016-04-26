@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 import './index.css';
-import './../assets/img/logo.jpg';
+import 'bootstrap-css';
+import './../assets/img/logo.png';
 import React from 'react';
 import {render} from 'react-dom';
 import { Provider } from 'react-redux';
