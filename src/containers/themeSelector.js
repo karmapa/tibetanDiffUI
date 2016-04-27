@@ -1,16 +1,16 @@
 import React from 'react';
-import {DropdownButton, MenuItem, ButtonToolbar} from 'react-bootstrap';
+import {DropdownButton, MenuItem} from 'react-bootstrap';
 
 const render = () => {
   return (
-    <ButtonToolbar>
-      <DropdownButton title="Theme" id="dropdown-size-medium">
-        <MenuItem eventKey="1">Green</MenuItem>
-        <MenuItem eventKey="2">Blue</MenuItem>
-        <MenuItem eventKey="3">Black</MenuItem>
-        <MenuItem eventKey="4">Yellow</MenuItem>
+    <div id="themeSelector">
+      <DropdownButton title="Theme" id="themeDropdown" bsStyle={'Info'.toLowerCase()}>
+        <MenuItem id="themeGreen" eventKey="themeGreen">Green</MenuItem>
+        <MenuItem id="themeBlue" eventKey="themeBlue">Blue</MenuItem>
+        <MenuItem id="themeBlack" eventKey="themeBlack">Black</MenuItem>
+        <MenuItem id="themeYellow" eventKey="themeYellow">Yellow</MenuItem>
       </DropdownButton>
-    </ButtonToolbar>
+    </div>
   )
 }
 

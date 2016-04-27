@@ -3,15 +3,12 @@
   background: #EFF2E4;
 }
 
-
-
 #logoArea {
   background-color: transparent;
   display: flex;
   width: 100%;
   height: 10%;
   padding-left: 8px;
-  padding-bottom: 40px
 }
 
 #logo {
@@ -31,9 +28,58 @@
   flex: 5;
   text-align: right;
   padding-top: 80px;
-  padding-right: 16px;
+  padding-right: 70px;
 }
 
+#pageSelector {
+  display:inline;
+  height: 45px;
+  padding-right: 40px;
+}
+
+#pageInput {
+  padding-bottom: 6px;
+  text-align: center;
+  width: 120px;
+  height: 32px;
+  font-size: 20px;
+}
+
+#pageSelectLeft {
+  width: 40px;
+  height: 32px;
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+}
+
+#pageSelectRight {
+  width: 40px;
+  height: 32px;
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+}
+
+#themeSelector {
+  display:inline;
+  border-radius: 5px;
+}
+
+#themeGreen {
+  background-color: #D3FFBE;
+}
+
+#themeBlue {
+ background-color: #B7F2FF;
+}
+
+#themeBlack {
+  color: white;
+ background-color: #616161;
+}
+
+#themeYellow {
+ background-color: #FFE7B7;
+}
 /* main */
 #main {
   display: -webkit-flex;
