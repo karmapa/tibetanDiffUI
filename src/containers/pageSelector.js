@@ -23,20 +23,19 @@ const onPagePre = () => {
 }
 
 const render = (state) => {
-  console.log(state.pager.pager)
+  console.log(state.pager)
   return (
     <div id="pageSelector">
     <button id="pageSelectLeft" onClick={() => {onPagePre()}}>&larr;</button>
-    <input id="pageInput" value={state.pager.pager.currentPage} onChange={handleChange}></input>
+    <input id="pageInput" value={state.pager.currentPage} onChange={handleChange}></input>
     <button id="pageSelectRight" onClick={() => {onPageNext()}}>&rarr;</button>
     </div>
     )
 }
 
 const mapStateToProps = (state) => {
-//  console.log(state);
   return {
-    pager: state
+    pager: state.pager
   }
 }
 

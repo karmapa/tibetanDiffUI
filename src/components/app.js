@@ -15,9 +15,7 @@ export default class App extends Component {
         <ThemeSelector />
         </div>
       </header>
-      <div id="main">
       <ShowDiff />
-      </div>
       </div>
     );
   }
