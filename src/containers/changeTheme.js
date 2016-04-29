@@ -6,7 +6,9 @@ export const changeTheme = (color) => {
       logo: 'transparent',
       main: '#000000',
       logoTitle: '#4A8731',
-      text: '#FFFFFF'
+      textBg: '#FFFFFF',
+      diffedDrawGreen: 'lightgreen',
+      diffedDrawRed: 'pink'
     },
     blue: {
       bg: '#D7ECFF',
@@ -14,7 +16,9 @@ export const changeTheme = (color) => {
       logo: 'transparent',
       main: '#000000',
       logoTitle: '#4A8731',
-      text: '#FFFFFF'
+      textBg: '#FFFFFF',
+      diffedDrawGreen: 'lightgreen',
+      diffedDrawRed: 'pink'
     },
     black: {
       bg: '#000000',
@@ -22,7 +26,9 @@ export const changeTheme = (color) => {
       logo: '#FFFFFF',
       main: '#FFFFFF',
       logoTitle: '#FFFFFF',
-      text: '#2B2B2B'
+      textBg: '#2B2B2B',
+      diffedDrawGreen: 'green',
+      diffedDrawRed: 'red'
     },
     yellow: {
       bg: '#FFF4D7',
@@ -30,7 +36,9 @@ export const changeTheme = (color) => {
       logo: 'transparent',
       main: '#000000',
       logoTitle: '#4A8731',
-      text: '#FFFFFF'
+      textBg: '#FFFFFF',
+      diffedDrawGreen: 'lightgreen',
+      diffedDrawRed: 'pink'
     }
   }
   document.getElementById('bg').style.background = themeTypes[color]['bg'];  
@@ -38,9 +46,12 @@ export const changeTheme = (color) => {
   document.getElementById('main').style.color = themeTypes[color]['main'];
   document.getElementById('logoTitle').style.color = themeTypes[color]['logoTitle'];
   document.getElementById('ljTitle').style.background = themeTypes[color]['title'];
-  document.getElementById('ljText').style.background = themeTypes[color]['text'];
+  document.getElementById('ljText').style.background = themeTypes[color]['textBg'];
   document.getElementById('dgTitle').style.background = themeTypes[color]['title'];
-  document.getElementById('dgText').style.background = themeTypes[color]['text'];
+  document.getElementById('dgText').style.background = themeTypes[color]['textBg'];
   document.getElementById('diffedTitle').style.background = themeTypes[color]['title'];
-  document.getElementById('diffedText').style.background = themeTypes[color]['text'];
+  document.getElementById('diffedText').style.background = themeTypes[color]['textBg'];
+  document.getElementById('diffedDrawGreen').style.background = themeTypes[color]['diffedDrawGreen'];
+  document.getElementById('diffedDrawRed').style.background = themeTypes[color]['diffedDrawRed'];
+
 }

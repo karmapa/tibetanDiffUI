@@ -147,3 +147,15 @@
   width: 100%;
   height: 600px;
 }
+
+#diffedDrawGreen {
+  background: lightgreen;
+}
+
+#diffedDrawRed {
+  background: pink;
+}
+
+#diffedDrawBlack {
+
+}
