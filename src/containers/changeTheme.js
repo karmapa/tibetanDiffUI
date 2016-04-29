@@ -51,7 +51,4 @@ export const changeTheme = (color) => {
   document.getElementById('dgText').style.background = themeTypes[color]['textBg'];
   document.getElementById('diffedTitle').style.background = themeTypes[color]['title'];
   document.getElementById('diffedText').style.background = themeTypes[color]['textBg'];
-  document.getElementById('diffedDrawGreen').style.background = themeTypes[color]['diffedDrawGreen'];
-  document.getElementById('diffedDrawRed').style.background = themeTypes[color]['diffedDrawRed'];
-
 }

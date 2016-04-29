@@ -149,11 +149,11 @@
 }
 
 #diffedDrawGreen {
-  background: lightgreen;
+  background: #8BCE4D;
 }
 
 #diffedDrawRed {
-  background: pink;
+  background: #FF4949;
 }
 
 #diffedDrawBlack {

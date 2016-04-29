@@ -19,8 +19,11 @@ const render = (state) => {
   let output = arr.map((word, idx) => {
     if('black' != word[0] && word[1].match(/[\u0f0b-\u0f12\s]/)) return;
     let color = 'diffedDrawBlack';
-    if('green' === word[0]) color = 'diffedDrawGreen';
-    if('red' === word[0]) color = 'diffedDrawRed';
+    if('green' === word[0]) {
+      color = 'diffedDrawGreen';
+    }else if('red' === word[0]) {
+      color = 'diffedDrawRed';
+    }
     return <span key={idx} id={color} >{word[1]}</span>
   })
   return (
