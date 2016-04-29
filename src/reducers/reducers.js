@@ -6,8 +6,6 @@ import {types} from '../actions/action.js';
 const ljPages = Object.keys(lj001);
 const dgPages = Object.keys(dg001);
 
-console.log(ljPages);
-
 const initialState = {
   currentPage: ljPages[0],
   pageNumber: 0,
