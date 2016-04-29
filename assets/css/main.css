@@ -99,6 +99,7 @@
 }
 
 #ljTitle {
+  padding-left: 4px;
   border: 1px solid #000000;
   background: #D3FFBE;
 }
@@ -115,6 +116,7 @@
 }
 
 #dgTitle {
+  padding-left: 4px;
   border: 1px solid #000000;
   background: #D3FFBE;
 }
@@ -131,6 +133,7 @@
 }
 
 #diffedTitle {
+  padding-left: 4px;
   border: 1px solid #000000;
   background: #D3FFBE;
 }
