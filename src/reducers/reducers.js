@@ -3,12 +3,15 @@ import lj001 from '../../assets/diffData/lj001.js';
 import dg001 from '../../assets/diffData/dg001.js';
 import {types} from '../actions/action.js';
 
-export const initialState = {
+const ljPages = Object.keys(lj001);
+const dgPages = Object.keys(dg001);
+
+const initialState = {
   currentPage: '1.1b',
   pageNumber: 0,
-  pages: ['1.1b', '1.2a', '1.2b', '1.3a', '1.3b'],
+  pages: ljPages,
   warnNext: false,
-  warnPre: true,
+  warnPre: false,
   ljText: lj001['1.1b'],
   dgText: dg001['1.1b']
 }
