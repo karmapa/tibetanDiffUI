@@ -6,14 +6,16 @@ import {types} from '../actions/action.js';
 const ljPages = Object.keys(lj001);
 const dgPages = Object.keys(dg001);
 
+console.log(ljPages);
+
 const initialState = {
-  currentPage: '1.1b',
+  currentPage: ljPages[0],
   pageNumber: 0,
   pages: ljPages,
   warnNext: false,
   warnPre: false,
-  ljText: lj001['1.1b'],
-  dgText: dg001['1.1b']
+  ljText: lj001[ljPages[0]],
+  dgText: dg001[ljPages[0]]
 }
 
 const pager = (state = initialState, action) => {
