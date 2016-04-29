@@ -4,10 +4,8 @@ import store from '../store/store.js';
 
 const render = (state) => {
   let arr = state.pager.ljText.split('\r\n');
-  let output = arr.map((line) => {
-    return (
-      <div>{line}</div>
-    )
+  let output = arr.map((line, idx) => {
+    return <div key={idx}>{line}</div>
   })
   return (
     <div>{output}</div>
