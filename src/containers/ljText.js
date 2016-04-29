@@ -3,8 +3,14 @@ import {connect} from 'react-redux';
 import store from '../store/store.js';
 
 const render = (state) => {
+  let arr = state.pager.ljText.split('\r\n');
+  let output = arr.map((line) => {
+    return (
+      <div>{line}</div>
+    )
+  })
   return (
-    <div>{state.pager.ljText}</div>
+    <div>{output}</div>
   )
 }
 
