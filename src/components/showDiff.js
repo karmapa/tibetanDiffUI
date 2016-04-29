@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import LjText from '../containers/ljText.js';
 import DgText from '../containers/dgText.js';
-import DiffedText from '../containers/diffedText.js'
+import DiffedText from '../containers/diffedText.js';
 
 export default class ShowDiff extends Component {
   render() {

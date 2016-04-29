@@ -4,7 +4,6 @@ import store from '../store/store.js';
 import {pageNext, pagePre} from '../actions/action.js';
 
 const handleChange = (event) => {
-//  console.log(event)
   return
 }
 
@@ -23,7 +22,6 @@ const onPagePre = () => {
 }
 
 const render = (state) => {
-  console.log(state.pager)
   return (
     <div id="pageSelector">
     <button id="pageSelectLeft" onClick={() => {onPagePre()}}>&larr;</button>
