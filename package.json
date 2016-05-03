@@ -23,7 +23,7 @@
     "react-bootstrap": "0.29.2",
     "react-dom": "15.0.1",
     "react-redux": "4.4.5",
-    "react-split-pane-2": "0.1.36",
+    "react-resizable-box": "1.2.0",
     "redux": "3.5.2"
   },
   "devDependencies": {
