@@ -10,19 +10,19 @@ export default class ShowDiff extends Component {
         <span id="ljRender">
           <div id="ljTitle">LJ</div>
           <div id="ljText">
-          <LjText />
+            <LjText />
           </div>
         </span>
         <span id="dgRender">
           <div id="dgTitle">DG</div>
           <div id="dgText">
-          <DgText />
+            <DgText />
           </div>
         </span>
         <span id="diffedRender">
           <div id="diffedTitle">Diffed</div>
           <div id="diffedText">
-          <DiffedText />
+            <DiffedText />
           </div>
         </span>
       </div>
