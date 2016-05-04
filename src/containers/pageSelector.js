@@ -25,9 +25,9 @@ const onPagePre = () => {
 const render = (state) => {
   return (
     <div id="pageSelector">
-    <button id="pageSelectLeft" onClick={() => {onPagePre()}}>&larr;</button>
-    <input id="pageInput" value={state.pager.pageInput} onChange={handleChange}></input>
-    <button id="pageSelectRight" onClick={() => {onPageNext()}}>&rarr;</button>
+      <button id="pageSelectLeft" onClick={() => {onPagePre()}}>&larr;</button>
+      <input id="pageInput" value={state.pager.pageInput} onChange={handleChange}></input>
+      <button id="pageSelectRight" onClick={() => {onPageNext()}}>&rarr;</button>
     </div>
   )
 }
