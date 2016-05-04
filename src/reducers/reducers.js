@@ -59,7 +59,7 @@ const pager = (state = initialState, action) => {
         }
       }
     case 'PAGEINPUT':
-      if (state.pages.some(pb => action.input.match(pb))) {
+      if (state.pages.some(pb => action.input == pb)) {
         return {
           ...state,
           pageNumber: state.pages.indexOf(action.input),
