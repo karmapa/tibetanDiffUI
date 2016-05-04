@@ -6,7 +6,10 @@ const render = (state) => {
   let arr = state.pager.dgText.split('\r\n');
   let currentPage = '-' + state.pager.currentPage;
   let output = arr.map((line, idx) => {
-    return <div key={idx}>{line}</div>
+    if ('' === line) {
+      return;
+    }
+    return <div key={idx}><span key={idx}>{idx + 1}</span>{line}</div>
   });
   return (
     <span id="dgRender">
@@ -22,6 +25,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-const DgText = connect(mapStateToProps)(render)
+const TextDg = connect(mapStateToProps)(render)
 
-export default DgText;
+export default TextDg;

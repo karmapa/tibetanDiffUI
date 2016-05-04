@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import LjText from '../containers/ljText.js';
-import DgText from '../containers/dgText.js';
-import DiffedText from '../containers/diffedText.js';
+import TextLj from '../containers/TextLj.js';
+import TextDg from '../containers/TextDg.js';
+import TextDiffed from '../containers/TextDiffed.js';
 import Resizable from 'react-resizable-box';
 
 export default class ShowDiff extends Component {
@@ -12,14 +12,14 @@ export default class ShowDiff extends Component {
           width="33%"
           minWidth={90}
         >
-          <LjText />
+          <TextLj />
         </Resizable>
-        <DgText />
+        <TextDg />
         <Resizable
           width="33%"
           minWidth={90}
         >
-          <DiffedText />
+          <TextDiffed />
         </Resizable>
       </div>
     )

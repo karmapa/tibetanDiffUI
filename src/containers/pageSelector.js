@@ -4,7 +4,6 @@ import store from '../store/store.js';
 import {pageNext, pagePre, pageInput} from '../actions/action.js';
 
 const handleChange = (event) => {
-  console.log('onChange:' + event.target.value);
   store.dispatch(pageInput(event.target.value));
 }
 

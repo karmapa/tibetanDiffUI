@@ -1,6 +1,6 @@
 import React from 'react';
 import {DropdownButton, MenuItem} from 'react-bootstrap';
-import {changeTheme} from './changeTheme.js';
+import {changeTheme} from './ChangeTheme.js';
 
 const render = () => {
   return (

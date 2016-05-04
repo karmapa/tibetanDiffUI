@@ -22,6 +22,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-const LjText = connect(mapStateToProps)(render)
+const TextLj = connect(mapStateToProps)(render)
 
-export default LjText;
+export default TextLj;

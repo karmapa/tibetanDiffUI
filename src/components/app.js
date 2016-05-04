@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import PageSelector from '../containers/pageSelector.js';
-import ThemeSelector from '../containers/themeSelector.js';
-import ShowDiff from './showDiff.js';
+import PageSelector from '../containers/PageSelector.js';
+import ThemeSelector from '../containers/ThemeSelector.js';
+import ShowDiff from './ShowDiff.js';
 
 export default class App extends Component {
   render() {

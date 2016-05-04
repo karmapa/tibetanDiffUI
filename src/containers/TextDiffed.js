@@ -44,6 +44,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-const DiffedText = connect(mapStateToProps)(render)
+const TextDiffed = connect(mapStateToProps)(render)
 
-export default DiffedText;
+export default TextDiffed;
