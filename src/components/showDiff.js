@@ -10,14 +10,14 @@ export default class ShowDiff extends Component {
       <div id="main">
         <Resizable
           width="33%"
-          minWidth={35}
+          minWidth={90}
         >
           <LjText />
         </Resizable>
         <DgText />
         <Resizable
           width="33%"
-          minWidth={43}
+          minWidth={90}
         >
           <DiffedText />
         </Resizable>

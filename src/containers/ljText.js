@@ -4,7 +4,7 @@ import store from '../store/store.js';
 
 const render = (state) => {
   let arr = state.pager.ljText.split('\r\n');
-  let currentPage = ' - ' + state.pager.currentPage;
+  let currentPage = '-' + state.pager.currentPage;
   let output = arr.map((line, idx) => {
     return <div key={idx}>{line}</div>
   });

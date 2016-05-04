@@ -18,7 +18,6 @@ const diff = (oldText, newText) => {
 
 const render = (state) => {
   let arr = diff(state.pager.ljText, state.pager.dgText);
-  let currentPage = ' - ' + state.pager.currentPage;
   let output = arr.map((word, idx) => {
     if ('black' !== word[0] && word[1].match(/[\u0f0b-\u0f12\s]/)) {
       return;
@@ -33,7 +32,7 @@ const render = (state) => {
   });
   return (
     <span id="diffedRender">
-      <div id="diffedTitle">Diffed{currentPage}</div>
+      <div id="diffedTitle">Diffed</div>
       <div id="diffedText">{output}</div>
     </span>
   )
