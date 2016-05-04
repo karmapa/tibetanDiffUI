@@ -8,7 +8,7 @@ const render = (state) => {
     if ('' === line) {
       return;
     }
-    return <div key={idx}><span key={idx}>{idx + 1}</span>{line}</div>;
+    return <div key={idx}>{line}</div>;
   });
   return (
     <span id="dgRender">
