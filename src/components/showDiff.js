@@ -10,29 +10,16 @@ export default class ShowDiff extends Component {
       <div id="main">
         <Resizable
           width="33%"
+          minWidth={35}
         >
-          <span id="ljRender">
-            <div id="ljTitle">LJ</div>
-            <div id="ljText">
-            <LjText />
-            </div>
-          </span>
+          <LjText />
         </Resizable>
-        <span id="dgRender">
-          <div id="dgTitle">DG</div>
-          <div id="dgText">
-          <DgText />
-          </div>
-        </span>
+        <DgText />
         <Resizable
           width="33%"
+          minWidth={43}
         >
-          <span id="diffedRender">
-            <div id="diffedTitle">Diffed</div>
-            <div id="diffedText">
-            <DiffedText />
-            </div>
-          </span>
+          <DiffedText />
         </Resizable>
       </div>
     )

@@ -6,9 +6,7 @@ export const changeTheme = (color) => {
       logo: 'transparent',
       main: '#000000',
       logoTitle: '#4A8731',
-      textBg: '#FFFFFF',
-      diffedDrawGreen: 'lightgreen',
-      diffedDrawRed: 'pink'
+      textBg: '#FFFFFF'
     },
     blue: {
       bg: '#D7ECFF',
@@ -16,9 +14,7 @@ export const changeTheme = (color) => {
       logo: 'transparent',
       main: '#000000',
       logoTitle: '#4A8731',
-      textBg: '#FFFFFF',
-      diffedDrawGreen: 'lightgreen',
-      diffedDrawRed: 'pink'
+      textBg: '#FFFFFF'
     },
     black: {
       bg: '#000000',
@@ -26,9 +22,7 @@ export const changeTheme = (color) => {
       logo: '#FFFFFF',
       main: '#FFFFFF',
       logoTitle: '#FFFFFF',
-      textBg: '#2B2B2B',
-      diffedDrawGreen: 'green',
-      diffedDrawRed: 'red'
+      textBg: '#2B2B2B'
     },
     yellow: {
       bg: '#FFF4D7',
@@ -36,9 +30,7 @@ export const changeTheme = (color) => {
       logo: 'transparent',
       main: '#000000',
       logoTitle: '#4A8731',
-      textBg: '#FFFFFF',
-      diffedDrawGreen: 'lightgreen',
-      diffedDrawRed: 'pink'
+      textBg: '#FFFFFF'
     }
   }
   document.getElementById('bg').style.background = themeTypes[color]['bg'];  

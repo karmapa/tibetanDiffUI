@@ -4,11 +4,15 @@ import store from '../store/store.js';
 
 const render = (state) => {
   let arr = state.pager.dgText.split('\r\n');
+  let currentPage = ' - ' + state.pager.currentPage;
   let output = arr.map((line, idx) => {
     return <div key={idx}>{line}</div>
-  })
+  });
   return (
-    <div>{output}</div>
+    <span id="dgRender">
+      <div id="dgTitle">DG{currentPage}</div>
+      <div id="dgText">{output}</div>
+    </span>
   )
 }
 
