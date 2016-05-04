@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import store from '../store/store.js';
 
 const render = (state) => {
   let arr = state.pager.dgText.split('\r\n');
@@ -9,22 +8,22 @@ const render = (state) => {
     if ('' === line) {
       return;
     }
-    return <div key={idx}><span key={idx}>{idx + 1}</span>{line}</div>
+    return <div key={idx}><span key={idx}>{idx + 1}</span>{line}</div>;
   });
   return (
     <span id="dgRender">
       <div id="dgTitle">DG{currentPage}</div>
       <div id="dgText">{output}</div>
     </span>
-  )
-}
+  );
+};
 
 const mapStateToProps = (state) => {
   return {
     pager: state.pager
-  }
-}
+  };
+};
 
-const TextDg = connect(mapStateToProps)(render)
+const TextDg = connect(mapStateToProps)(render);
 
 export default TextDg;

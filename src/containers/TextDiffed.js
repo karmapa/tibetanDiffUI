@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import store from '../store/store.js';
 import * as JsDiff from 'diff';
 
 const diff = (oldText, newText) => {
@@ -14,7 +13,7 @@ const diff = (oldText, newText) => {
     }
     return ['black', part.value];
   });
-}
+};
 
 const render = (state) => {
   let arr = diff(state.pager.ljText, state.pager.dgText);
@@ -28,22 +27,22 @@ const render = (state) => {
     } else if ('red' === word[0]) {
       color = 'diffedDrawRed';
     }
-    return <span key={idx} id={color} >{word[1]}</span>
+    return <span key={idx} id={color} >{word[1]}</span>;
   });
   return (
     <span id="diffedRender">
       <div id="diffedTitle">Diffed</div>
       <div id="diffedText">{output}</div>
     </span>
-  )
-}
+  );
+};
 
 const mapStateToProps = (state) => {
   return {
     pager: state.pager
-  }
-}
+  };
+};
 
-const TextDiffed = connect(mapStateToProps)(render)
+const TextDiffed = connect(mapStateToProps)(render);
 
 export default TextDiffed;

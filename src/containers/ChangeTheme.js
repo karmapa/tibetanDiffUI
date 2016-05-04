@@ -32,8 +32,8 @@ export const ChangeTheme = (color) => {
       logoTitle: '#4A8731',
       textBg: '#FFFFFF'
     }
-  }
-  document.getElementById('bg').style.background = themeTypes[color]['bg'];  
+  };
+  document.getElementById('bg').style.background = themeTypes[color]['bg'];
   document.getElementById('logo').style.background = themeTypes[color]['logo'];
   document.getElementById('main').style.color = themeTypes[color]['main'];
   document.getElementById('logoTitle').style.color = themeTypes[color]['logoTitle'];
@@ -43,4 +43,4 @@ export const ChangeTheme = (color) => {
   document.getElementById('dgText').style.background = themeTypes[color]['textBg'];
   document.getElementById('diffedTitle').style.background = themeTypes[color]['title'];
   document.getElementById('diffedText').style.background = themeTypes[color]['textBg'];
-}
+};

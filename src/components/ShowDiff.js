@@ -22,6 +22,6 @@ export default class ShowDiff extends Component {
           <TextDiffed />
         </Resizable>
       </div>
-    )
+    );
   }
 }
