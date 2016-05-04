@@ -1,4 +1,4 @@
-export const ChangeTheme = (color) => {
+export const changeTheme = (color) => {
   const themeTypes = {
     green: {
       bg: '#EFF2E4',
