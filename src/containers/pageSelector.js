@@ -1,10 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import store from '../store/store.js';
-import {pageNext, pagePre} from '../actions/action.js';
+import {pageNext, pagePre, pageInput} from '../actions/action.js';
 
 const handleChange = (event) => {
-  return
+  console.log('onChange:' + event.target.value);
+  store.dispatch(pageInput(event.target.value));
 }
 
 const onPageNext = () => {
@@ -25,10 +26,10 @@ const render = (state) => {
   return (
     <div id="pageSelector">
     <button id="pageSelectLeft" onClick={() => {onPagePre()}}>&larr;</button>
-    <input id="pageInput" value={state.pager.currentPage} onChange={handleChange}></input>
+    <input id="pageInput" value={state.pager.pageInput} onChange={handleChange}></input>
     <button id="pageSelectRight" onClick={() => {onPageNext()}}>&rarr;</button>
     </div>
-    )
+  )
 }
 
 const mapStateToProps = (state) => {

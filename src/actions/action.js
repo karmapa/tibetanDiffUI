@@ -1,13 +1,18 @@
 export function pageNext() {
   return {
-    type: 'PAGENEXT',
-    i: ''
+    type: 'PAGENEXT'
   }
 }
 
 export function pagePre() {
   return {
-    type: 'PAGEPRE',
-    i: ''
+    type: 'PAGEPRE'
+  }
+}
+
+export function pageInput(input) {
+  return {
+    type: 'PAGEINPUT',
+    input: input
   }
 }
