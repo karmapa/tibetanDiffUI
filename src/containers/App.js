@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import PageSelector from '../containers/PageSelector.js';
-import ThemeSelector from '../containers/ThemeSelector.js';
+import PageSelector from './PageSelector.js';
+import ThemeSelector from './ThemeSelector.js';
 import {connect} from 'react-redux';
-import ShowDiff from './Diff.js';
+import ShowDiff from '../components/Diff.js';
 
 class AppContainer extends Component {
   render() {
