@@ -9,16 +9,10 @@ const handleChange = (event) => {
 
 const onPageNext = () => {
   store.dispatch(pageNext());
-  if (store.getState().pager.warnNext) {
-    alert(store.getState().pager.currentPage + ' 是最後一頁');
-  }
 };
 
 const onPagePre = () => {
   store.dispatch(pagePre());
-  if (store.getState().pager.warnPre) {
-    alert(store.getState().pager.currentPage + ' 是第一頁');
-  }
 };
 
 const render = (state) => {
