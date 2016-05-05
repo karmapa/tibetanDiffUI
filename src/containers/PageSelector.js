@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import store from '../store/store.js';
-import {pageNext, pagePre, pageInput} from '../actions/action.js';
+import {pageNext, pagePre, pageInput} from '../reducers/pager.js';
 
 const handleChange = (event) => {
   store.dispatch(pageInput(event.target.value));
