@@ -13,7 +13,8 @@ const initialState = {
   ljText: lj001[ljPages[0]],
   dgText: dg001[ljPages[0]],
   pageInput: ljPages[0],
-  wrongPageInput: false
+  wrongPageInput: false,
+  themeStyle: 'themeGreen'
 };
 
 const pager = (state = initialState, action) => {
@@ -74,6 +75,11 @@ const pager = (state = initialState, action) => {
           wrongPageInput: true
         };
       }
+    case 'THEMESWITCH':
+      return {
+        ...state,
+        themeStyle: action.style
+      };
     default:
       return state;
   }

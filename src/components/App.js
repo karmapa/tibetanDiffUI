@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import PageSelector from '../containers/PageSelector.js';
 import ThemeSelector from '../containers/ThemeSelector.js';
+import {connect} from 'react-redux';
 import ShowDiff from './ShowDiff.js';
 
-export default class App extends Component {
+class AppContainer extends Component {
   render() {
     return (
-      <div>
+      <div id="theme" className={this.props.themeStyle}>
         <header id="logoArea">
           <img id="logo" src="./logo.png" alt="logo" />
           <span id="logoTitle">正法寶藏工作室</span>
@@ -21,3 +22,12 @@ export default class App extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    themeStyle: state.pager.themeStyle
+  };
+};
+
+const App = connect(mapStateToProps)(AppContainer);
+
+export default App;

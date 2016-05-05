@@ -16,3 +16,10 @@ export function pageInput(input) {
     input: input
   };
 }
+
+export function themeSwitch(style) {
+  return {
+    type: 'THEMESWITCH',
+    style: 'theme' + style
+  };
+}

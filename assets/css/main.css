@@ -1,6 +1,6 @@
 /* header */
-#bg {
-  background: #EFF2E4;
+#theme {
+  height: 100vh;
 }
 
 #logoArea {
@@ -14,7 +14,6 @@
 
 #logo {
   padding-top: 8px;
-  background: transparent;
   border-radius:10px;
   width: 100px;
   height: 105px;
@@ -24,7 +23,6 @@
   flex: 5;
   font-size: 200%;
   text-align: left;
-  color: #4A8731;
   padding-top: 42px; 
 }
 
@@ -32,7 +30,7 @@
   flex: 5;
   text-align: right;
   padding-top: 80px;
-  padding-right: 70px;
+  padding-right: 12%;
 }
 
 #pageSelector {
@@ -73,21 +71,21 @@
 }
 
 #themeBlue {
- background-color: #B7F2FF;
+  background-color: #B7F2FF;
 }
 
 #themeBlack {
   color: white;
- background-color: #616161;
+  background-color: #616161;
 }
 
 #themeYellow {
- background-color: #FFE7B7;
+  background-color: #FFE7B7;
 }
 /* main */
 #main {
   margin:5px auto;
-  padding-top: 48px;
+  padding-top: 56px;
   display: -webkit-flex;
   display: flex;
   width: 90%;
@@ -101,13 +99,11 @@
 #ljTitle {
   padding-left: 4px;
   border: 1px solid #000000;
-  background: #D3FFBE;
 }
 
 #ljText {
   overflow: auto;
   padding-left: 2px;
-  background-color: #FFFFFF;
   border: 1px solid #000000;
   width: 100%;
   height: 700px;
@@ -120,13 +116,11 @@
 #dgTitle {
   padding-left: 4px;
   border: 1px solid #000000;
-  background: #D3FFBE;
 }
 
 #dgText {
   overflow: auto;
   padding-left: 2px;
-  background-color: #FFFFFF;
   border: 1px solid #000000;
   width: 100%;
   height: 700px;
@@ -139,13 +133,11 @@
 #diffedTitle {
   padding-left: 4px;
   border: 1px solid #000000;
-  background: #D3FFBE;
 }
 
 #diffedText {
   overflow: auto;
   padding-left: 2px;
-  background-color: #FFFFFF;
   border: 1px solid #000000;
   width: 100%;
   height: 700px;
@@ -161,4 +153,104 @@
 
 #diffedDrawBlack {
 
+}
+
+/* theme green*/
+#theme.themeGreen {
+  background: #EFF2E4;
+}
+
+#theme.themeGreen #logo {
+  background: transparent;
+}
+
+#theme.themeGreen #main {
+  color: #000000;
+}
+
+#theme.themeGreen #logoTitle {
+  color: #4A8731;
+}
+
+#theme.themeGreen #ljTitle, #theme.themeGreen #dgTitle, #theme.themeGreen #diffedTitle {
+  background: #D3FFBE;
+}
+
+#theme.themeGreen #ljText, #theme.themeGreen #dgText, #theme.themeGreen #diffedText {
+  background: #FFFFFF;
+}
+
+/* theme blue */
+#theme.themeBlue {
+  background: #D7ECFF;
+}
+
+#theme.themeBlue #logo {
+  background: transparent;
+}
+
+#theme.themeBlue #main {
+  color: #000000;
+}
+
+#theme.themeBlue #logoTitle {
+  color: #4A8731;
+}
+
+#theme.themeBlue #ljTitle, #theme.themeBlue #dgTitle, #theme.themeBlue #diffedTitle {
+  background: #B7F2FF;
+}
+
+#theme.themeBlue #ljText, #theme.themeBlue #dgText, #theme.themeBlue #diffedText {
+  background: #FFFFFF;
+}
+
+/* theme yellow */
+#theme.themeYellow {
+  background: #FFF4D7;
+}
+
+#theme.themeYellow #logo {
+  background: transparent;
+}
+
+#theme.themeYellow #main {
+  color: #000000;
+}
+
+#theme.themeYellow #logoTitle {
+  color: #4A8731;
+}
+
+#theme.themeYellow #ljTitle, #theme.themeYellow #dgTitle, #theme.themeYellow #diffedTitle {
+  background: #FFE7B7;
+}
+
+#theme.themeYellow #ljText, #theme.themeYellow #dgText, #theme.themeYellow #diffedText {
+  background: #FFFFFF;
+}
+
+/* theme black */
+#theme.themeBlack {
+  background: #000000;
+}
+
+#theme.themeBlack #logo {
+  background: #FFFFFF;
+}
+
+#theme.themeBlack #main {
+  color: #FFFFFF;
+}
+
+#theme.themeBlack #logoTitle {
+  color: #FFFFFF;
+}
+
+#theme.themeBlack #ljTitle, #theme.themeBlack #dgTitle, #theme.themeBlack #diffedTitle {
+  background: #616161;
+}
+
+#theme.themeBlack #ljText, #theme.themeBlack #dgText, #theme.themeBlack #diffedText {
+  background: #2B2B2B;
 }
