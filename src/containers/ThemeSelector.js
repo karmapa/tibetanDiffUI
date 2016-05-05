@@ -5,7 +5,6 @@ import {themeSwitch} from '../actions/action.js';
 
 const onThemeSwitch = (style) => {
   store.dispatch(themeSwitch(style));
-  console.log(store.getState().pager.themeStyle);
 };
 
 const render = () => {
