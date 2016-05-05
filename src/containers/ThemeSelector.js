@@ -1,7 +1,7 @@
 import React from 'react';
 import {DropdownButton, MenuItem} from 'react-bootstrap';
 import store from '../store/store.js';
-import {themeSwitch} from '../actions/action.js';
+import {themeSwitch} from '../reducers/pager.js';
 
 const onThemeSwitch = (style) => {
   store.dispatch(themeSwitch(style));
