@@ -8,17 +8,11 @@ export default class ShowDiff extends Component {
   render() {
     return (
       <div id="main">
-        <Resizable
-          width="33%"
-          minWidth={90}
-        >
+        <Resizable width="33%" minWidth={90}>
           <LjText />
         </Resizable>
         <DgText />
-        <Resizable
-          width="33%"
-          minWidth={90}
-        >
+        <Resizable width="33%" minWidth={90}>
           <DiffedText />
         </Resizable>
       </div>
