@@ -1,6 +1,6 @@
 import 'babel-polyfill';
-import './index.css';
 import 'bootstrap-css';
+import './index.css';
 import './../assets/img/logo.png';
 import React from 'react';
 import {render} from 'react-dom';

@@ -66,6 +66,10 @@
   border-radius: 5px;
 }
 
+.dropdown-menu {
+  padding: 0px 0;
+}
+
 #themeGreen {
   background-color: #D3FFBE;
 }
