@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const render = (state) => {
-  let arr = state.pager.dgText.split('\r\n');
+  let arr = state.pager.newText.split('\r\n');
+  let name = state.pager.newTextName;
   let currentPage = '-' + state.pager.currentPage;
   let output = arr.map((line, idx) => {
     if ('' === line) {
@@ -11,9 +12,9 @@ const render = (state) => {
     return <div key={idx}>{line}</div>;
   });
   return (
-    <span id="dgRender">
-      <div id="dgTitle">DG{currentPage}</div>
-      <div id="dgText">{output}</div>
+    <span id="newRender">
+      <div id="newTitle">{name}{currentPage}</div>
+      <div id="newText">{output}</div>
     </span>
   );
 };
@@ -24,6 +25,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-const TextDg = connect(mapStateToProps)(render);
+const NewText = connect(mapStateToProps)(render);
 
-export default TextDg;
+export default NewText;

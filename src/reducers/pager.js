@@ -1,17 +1,21 @@
-import lj001 from '../../assets/diffData/lj001.js';
-import dg001 from '../../assets/diffData/dg001.js';
+import oldText from '../../assets/diffData/oldText.js';
+import newText from '../../assets/diffData/newText.js';
 
-const ljPages = Object.keys(lj001);
+const oldTextName = Object.keys(oldText)[0];
+const newTextName = Object.keys(newText)[0];
+const oldPages = Object.keys(oldText[oldTextName]);
 
 const initialState = {
-  currentPage: ljPages[0],
+  currentPage: oldPages[0],
   pageNumber: 0,
-  pages: ljPages,
+  pages: oldPages,
   warnNext: false,
   warnPre: false,
-  ljText: lj001[ljPages[0]],
-  dgText: dg001[ljPages[0]],
-  pageInput: ljPages[0],
+  oldTextName: oldTextName,
+  oldText: oldText[oldTextName][oldPages[0]],
+  newTextName: newTextName,
+  newText: newText[newTextName][oldPages[0]],
+  pageInput: oldPages[0],
   wrongPageInput: false,
   themeStyle: 'themeGreen'
 };
@@ -32,8 +36,8 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false,
           pageNumber: state.pageNumber + 1,
           currentPage: state.pages[state.pageNumber + 1],
-          ljText: lj001[state.pages[state.pageNumber + 1]],
-          dgText: dg001[state.pages[state.pageNumber + 1]],
+          oldText: oldText[oldTextName][state.pages[state.pageNumber + 1]],
+          newText: newText[newTextName][state.pages[state.pageNumber + 1]],
           pageInput: state.pages[state.pageNumber + 1]
         };
       }
@@ -51,8 +55,8 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false,
           pageNumber: state.pageNumber - 1,
           currentPage: state.pages[state.pageNumber - 1],
-          ljText: lj001[state.pages[state.pageNumber - 1]],
-          dgText: dg001[state.pages[state.pageNumber - 1]],
+          oldText: oldText[oldTextName][state.pages[state.pageNumber - 1]],
+          newText: newText[newTextName][state.pages[state.pageNumber - 1]],
           pageInput: state.pages[state.pageNumber - 1]
         };
       }
@@ -61,8 +65,8 @@ const reducer = (state = initialState, action) => {
         return {
           ...state,
           pageNumber: state.pages.indexOf(action.input),
-          ljText: lj001[action.input],
-          dgText: dg001[action.input],
+          oldText: oldText[oldTextName][action.input],
+          newText: newText[newTextName][action.input],
           currentPage: action.input,
           pageInput: action.input,
           wrongPageInput: false

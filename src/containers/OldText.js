@@ -2,15 +2,16 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const render = (state) => {
-  let arr = state.pager.ljText.split('\r\n');
+  let arr = state.pager.oldText.split('\r\n');
+  let name = state.pager.oldTextName;
   let currentPage = '-' + state.pager.currentPage;
   let output = arr.map((line, idx) => {
     return <div key={idx}>{line}</div>;
   });
   return (
-    <span id="ljRender">
-      <div id="ljTitle">LJ{currentPage}</div>
-      <div id="ljText">{output}</div>
+    <span id="oldRender">
+      <div id="oldTitle">{name}{currentPage}</div>
+      <div id="oldText">{output}</div>
     </span>
   );
 };
@@ -21,6 +22,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-const LjText = connect(mapStateToProps)(render);
+const OldText = connect(mapStateToProps)(render);
 
-export default LjText;
+export default OldText;
