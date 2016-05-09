@@ -1,5 +1,5 @@
-import oldText from '../../assets/diffData/oldText.js';
-import newText from '../../assets/diffData/newText.js';
+import oldText from '../../assets/diffData/oldText001.js';
+import newText from '../../assets/diffData/newText001.js';
 
 const oldTextName = Object.keys(oldText)[0];
 const newTextName = Object.keys(newText)[0];
