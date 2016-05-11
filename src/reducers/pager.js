@@ -61,20 +61,26 @@ const reducer = (state = initialState, action) => {
         };
       }
     case 'PAGEINPUT':
-      if (state.pages.some(pb => action.input === pb)) {
+      return {
+        ...state,
+        pageInput: action.input,
+        wrongPageInput: false
+      };
+    case 'PAGEKEYPRESS':
+      if (('Enter' === action.key) && (state.pages.some(pb => state.pageInput === pb))) {
         return {
           ...state,
-          pageNumber: state.pages.indexOf(action.input),
-          oldText: oldText[oldTextName][action.input],
-          newText: newText[newTextName][action.input],
-          currentPage: action.input,
-          pageInput: action.input,
+          pageNumber: state.pages.indexOf(state.pageInput),
+          oldText: oldText[oldTextName][state.pageInput],
+          newText: newText[newTextName][state.pageInput],
+          currentPage: state.pageInput,
+          pageInput: state.pageInput,
           wrongPageInput: false
         };
       } else {
         return {
           ...state,
-          pageInput: action.input,
+          pageInput: state.pageInput,
           wrongPageInput: true
         };
       }
@@ -106,6 +112,13 @@ export function pageInput(input) {
   return {
     type: 'PAGEINPUT',
     input: input
+  };
+}
+
+export function pageKeyPress(key) {
+  return {
+    type: 'PAGEKEYPRESS',
+    key: key
   };
 }
 

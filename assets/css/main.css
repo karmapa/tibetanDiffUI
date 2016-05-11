@@ -47,6 +47,14 @@
   font-size: 20px;
 }
 
+#pageInput.notWarn {
+  color: black;
+}
+
+#pageInput.warn {
+  color: #FF4949;
+}
+
 #pageSelectLeft {
   width: 40px;
   height: 32px;
