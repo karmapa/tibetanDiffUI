@@ -1,5 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import Resizable from 'react-resizable-box';
+
+const hideRender = () => {
+
+};
 
 const render = (state) => {
   let arr = state.pager.newText.split('\r\n');
@@ -13,7 +18,7 @@ const render = (state) => {
   });
   return (
     <span id="newRender">
-      <div id="newTitle">{name}{currentPage}</div>
+      <div id="newTitle">{name}{currentPage}<div className="closeRender">+</div></div>
       <div id="newText">{output}</div>
     </span>
   );

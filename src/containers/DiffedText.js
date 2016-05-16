@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as JsDiff from 'diff';
+import Resizable from 'react-resizable-box';
 
 const diff = (oldText, newText) => {
   return JsDiff.diffChars(oldText, newText)
@@ -30,10 +31,12 @@ const render = (state) => {
     return <span key={idx} id={color} >{word[1]}</span>;
   });
   return (
-    <span id="diffedRender">
-      <div id="diffedTitle">Diffed</div>
-      <div id="diffedText">{output}</div>
-    </span>
+    <Resizable width="33%" minWidth={100} height="100%" isResizable={{top:false, right:false, bottom:false, left:true, topRight:false, bottomRight:false, bottomLeft:false, topLeft:false}}>
+      <span id="diffedRender">
+        <div id="diffedTitle">Diffed<div className="closeRender">+</div></div>
+        <div id="diffedText">{output}</div>
+      </span>
+    </Resizable>
   );
 };
 
