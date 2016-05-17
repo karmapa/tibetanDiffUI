@@ -7,43 +7,35 @@
   background-color: transparent;
   display: flex;
   width: 100%;
-  height: 80px;
-  padding-top: 8px;
+  padding-top: 0px; 
   padding-left: 8px;
 }
 
-#logo {
-  border-radius: 5px;
-  width: 50px;
-  height: 52px;
-}
-
 #logoTitle {
-  padding-left: 2px;
+  padding-left: 5px;
   padding-top: 4px;
-  font-size: 32px;
-  text-align: left; 
+  font-size: 27px;
 }
 
 #titleRight {
   flex: 5;
   text-align: right;
-  padding-top: 14px;
-  padding-right: 12%;
+  padding-top: 8px;
+  padding-right: 5%;
 }
 
 #pageSelector {
   display:inline;
   height: 45px;
-  padding-right: 40px;
+  padding-right: 85px;
 }
 
 #pageInput {
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   text-align: center;
-  width: 120px;
+  width: 100px;
   height: 32px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #pageInput.notWarn {
@@ -55,10 +47,8 @@
 }
 
 #pageSelectLeft, #pageSelectRight {
-  width: 40px;
+  width: 34px;
   height: 32px;
-  background-color: #FFFFFF;
-  border: 1px solid #DDDDDD;
 }
 
 #themeSelector {
@@ -68,34 +58,38 @@
 
 .dropdown-menu {
   padding: 0px 0;
+  min-width: 80px;
+}
+
+#themeDefault {
+  height: 26px;
+  margin: 4px;
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
 }
 
 #themeGreen {
+  height: 26px;
+  margin: 4px;
   background-color: #D3FFBE;
 }
 
-#themeBlue {
-  background-color: #B7F2FF;
-}
-
 #themeBlack {
+  height: 26px;
+  margin: 4px;
   color: white;
-  background-color: #616161;
-}
-
-#themeYellow {
-  background-color: #FFE7B7;
+  background-color: #2B2B2B;
 }
 /* main */
 #main {
   padding-top: 1px;
   font-size: 16.5px;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 1%;
+  padding-right: 1%;
   display: -webkit-flex;
   display: flex;
   width: 100%;
-  height: 85%;
+  height: 90%;
 }
 
 #oldRender, #newRender, #diffedRender {
@@ -105,9 +99,11 @@
 
 #oldTitle, #newTitle, #diffedTitle {
   padding-left: 4px;
+  font-size: 18px;
 }
 
 #oldText, #newText, #diffedText {
+  font-size: 20px;
   overflow: auto;
   padding-left: 2px;
   width: 100%;
@@ -132,103 +128,124 @@
 #diffedDrawRed {
   background: #FF4949;
 }
-
 /* theme green */
 #theme.themeGreen {
   background: #EFF2E4;
-}
-
-#theme.themeGreen #logo {
-  background: transparent;
 }
 
 #theme.themeGreen #main {
   color: #000000;
 }
 
-#theme.themeGreen #logoTitle, #theme.themeGreen #smallLogoTitle{
+#theme.themeGreen #logoTitle {
   color: #4A8731;
 }
 
+#theme.themeGreen #pageSelectLeft, #theme.themeGreen #pageSelectRight {
+  color: #000000;
+  background-color: #F4FFEF;
+  border: 1px solid #DDDDDD;
+}
+
+#theme.themeGreen #themeDropdown {
+  color: #000000;
+  background-color: #F4FFEF;
+  border-color: #DDDDDD;
+}
+
+#theme.themeGreen #themeDropdown:hover, .open > #theme.themeGreen #themeDropdown:hover, .open > #theme.themeGreen #themeDropdown:focus {
+  color: #000000;
+  background-color: #E3EEDE;
+  border-color: #DDDDDD;
+}
+
 #theme.themeGreen #oldTitle, #theme.themeGreen #newTitle, #theme.themeGreen #diffedTitle {
-  background: #D3FFBE;
+  background: #F4FFEF;
   border: 1px solid #DDDDDD;
 }
 
 #theme.themeGreen #oldText, #theme.themeGreen #newText, #theme.themeGreen #diffedText {
-  background: #FFFFFF;
+  background: #FBFFF8;
   border: 1px solid #DDDDDD;
 }
-
-/* theme blue */
-#theme.themeBlue {
-  background: #D7ECFF;
+/* theme default */
+#theme.themeDefault {
+  background: #FAFAFA;
 }
 
-#theme.themeBlue #logo {
-  background: transparent;
+#theme.themeDefault #main {
+  color: #050505;
 }
 
-#theme.themeBlue #main {
+#theme.themeDefault #logoTitle {
+  color: #050505;
+}
+
+#theme.themeDefault #pageSelectLeft, #theme.themeDefault #pageSelectRight {
   color: #000000;
-}
-
-#theme.themeBlue #logoTitle {
-  color: #4A8731;
-}
-
-#theme.themeBlue #oldTitle, #theme.themeBlue #newTitle, #theme.themeBlue #diffedTitle {
-  background: #B7F2FF;
+  background-color: #FFFFFF;
   border: 1px solid #DDDDDD;
 }
 
-#theme.themeBlue #oldText, #theme.themeBlue #newText, #theme.themeBlue #diffedText {
-  background: #FFFFFF;
-  border: 1px solid #DDDDDD;
-}
-
-/* theme yellow */
-#theme.themeYellow {
-  background: #FFF4D7;
-}
-
-#theme.themeYellow #logo {
-  background: transparent;
-}
-
-#theme.themeYellow #main {
+#theme.themeDefault #themeDropdown {
   color: #000000;
+  background-color: #FFFFFF;
+  border-color: #DDDDDD;
 }
 
-#theme.themeYellow #logoTitle {
-  color: #4A8731;
+#theme.themeDefault #themeDropdown:hover, .open > #theme.themeDefault #themeDropdown:hover, .open > #theme.themeDefault #themeDropdown:focus {
+  color: #000000;
+  background-color: #F7F7F7;
+  border-color: #616161;
 }
 
-#theme.themeYellow #oldTitle, #theme.themeYellow #newTitle, #theme.themeYellow #diffedTitle {
-  background: #FFE7B7;
+#theme.themeDefault .dropdown-menu {
+  background-color: #F9F9F9;
+}
+
+#theme.themeDefault #oldTitle, #theme.themeDefault #newTitle, #theme.themeDefault #diffedTitle {
+  background: #F7F7F7;
   border: 1px solid #DDDDDD;
 }
 
-#theme.themeYellow #oldText, #theme.themeYellow #newText, #theme.themeYellow #diffedText {
+#theme.themeDefault #oldText, #theme.themeDefault #newText, #theme.themeDefault #diffedText {
   background: #FFFFFF;
   border: 1px solid #DDDDDD;
 }
 
 /* theme black */
 #theme.themeBlack {
-  background: #000000;
-}
-
-#theme.themeBlack #logo {
-  background: #FFFFFF;
+  background: #2B2B2B;
 }
 
 #theme.themeBlack #main {
-  color: #FFFFFF;
+  color: #DCDCBA;
 }
 
 #theme.themeBlack #logoTitle {
-  color: #FFFFFF;
+  color: #DCDCBA;
+}
+
+#theme.themeBlack #pageSelectLeft, #theme.themeBlack #pageSelectRight {
+  color: #DCDCBA;
+  background-color: #464545;
+  border: 1px solid #333333;
+}
+
+#theme.themeBlack #themeDropdown {
+  color: #DCDCBA;
+  background-color: #464545;
+  border-color: #1F1F1F;
+}
+
+#theme.themeBlack #themeDropdown:hover, .open > #theme.themeBlack #themeDropdown:hover, .open > #theme.themeBlack #themeDropdown:focus {
+  color: #DCDCBA;
+  background-color: #605E5E;
+  border-color: #1F1F1F;
+}
+
+#theme.themeBlack .dropdown-menu {
+  background-color: #555555;
 }
 
 #theme.themeBlack #oldTitle, #theme.themeBlack #newTitle, #theme.themeBlack #diffedTitle {
@@ -237,6 +254,6 @@
 }
 
 #theme.themeBlack #oldText, #theme.themeBlack #newText, #theme.themeBlack #diffedText {
-  background: #2B2B2B;
+  background: #3F3F3F;
   border: 1px solid #000000;
 }

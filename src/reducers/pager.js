@@ -17,7 +17,7 @@ const initialState = {
   newText: newText[newTextName][oldPages[0]],
   pageInput: oldPages[0],
   wrongPageInput: false,
-  themeStyle: 'themeGreen'
+  themeStyle: 'themeDefault'
 };
 
 const reducer = (state = initialState, action) => {
@@ -87,7 +87,7 @@ const reducer = (state = initialState, action) => {
     case 'THEMESWITCH':
       return {
         ...state,
-        themeStyle: action.style
+        themeStyle: 'theme' + action.style
       };
     default:
       return state;
@@ -125,6 +125,6 @@ export function pageKeyPress(key) {
 export function themeSwitch(style) {
   return {
     type: 'THEMESWITCH',
-    style: 'theme' + style
+    style: style
   };
 }

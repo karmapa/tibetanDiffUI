@@ -9,9 +9,8 @@ class AppContainer extends Component {
     return (
       <div id="theme" className={this.props.themeStyle}>
         <header id="logoArea">
-          <img id="logo" src="./logo.png" alt="logo" />
           <span>
-            <div id="logoTitle">正法寶藏工作室</div>
+            <div id="logoTitle">經文比對系統</div>
           </span>
           <div id="titleRight">
             <PageSelector />
