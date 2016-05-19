@@ -14,7 +14,8 @@ const hideRender = () => {
 let options = {
   mode: 'text/html',
   lineNumbers: true,
-  lineWrapping: true
+  lineWrapping: true,
+  readOnly: true
 };
 
 const render = (state) => {
@@ -23,7 +24,7 @@ const render = (state) => {
   return (
     <span id="newRender">
       <div id="newTitle">{name}{currentPage}<div className="closeRender">+</div></div>
-      <Codemirror id="newC" value={state.pager.newText} options={options} readonly="readonly"/>
+      <Codemirror id="newC" value={state.pager.newText} options={options} />
     </span>
   );
 };
