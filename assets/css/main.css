@@ -99,30 +99,32 @@
   height: 100%;
 }
 
+.ReactCodeMirror {
+  height: 99%;
+}
+
 #oldTitle, #newTitle, #diffedTitle {
   padding-left: 4px;
   font-size: 18px;
 }
 
-#oldText, #newText, #diffedText {
+.CodeMirror, .CodeMirror, #diffedText {
   font-size: 20px;
-  overflow: auto;
-  padding-left: 5px;
-  padding-right: 3px;
-  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
   height: 95%;
 }
 
-#oldTitle, #oldText {
-  box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+#oldTitle, .CodeMirror {
+  box-shadow: 0px 4px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 3px 0 rgba(0, 0, 0, 0.09);
 }
 
-#newTitle, #newText {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+#newTitle, .CodeMirror {
+  box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 3px 0 rgba(0, 0, 0, 0.09);
 }
 
 #diffedTitle, #diffedText {
-  box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 5px 0 rgba(0, 0, 0, 0.09) , 3px 4px 4px 0 rgba(0, 0, 0, 0.1), 3px 6px 5px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 3px 4px 2px 0 rgba(0, 0, 0, 0.1), 3px 6px 3px 0 rgba(0, 0, 0, 0.09);
 }
 
 #diffedRender {
@@ -148,7 +150,7 @@
   background: #FAFAFA;
 }
 
-#theme.themeDefault #main {
+#theme.themeDefault .CodeMirror-sizer {
   color: #050505;
 }
 
@@ -180,19 +182,29 @@
 
 #theme.themeDefault #oldTitle, #theme.themeDefault #newTitle, #theme.themeDefault #diffedTitle {
   background: #F7F7F7;
-  border: 1px solid #BBBBBB;
+  border: 1px solid #DDDDDD;
 }
 
-#theme.themeDefault #oldText, #theme.themeDefault #newText, #theme.themeDefault #diffedText {
-  background: #FFFFFF;
-  border: 1px solid #BBBBBB;
+#theme.themeDefault .CodeMirror-gutters {
+  background: #F7F7F7;
+  border-right: 1px solid #DDDDDD;
 }
+
+#theme.themeDefault .CodeMirror-linenumber {
+  color: #999999;
+}
+
+#theme.themeDefault .CodeMirror, #theme.themeDefault #diffedText {
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+}
+
 /* theme green */
 #theme.themeGreen {
   background: #EFF2E4;
 }
 
-#theme.themeGreen #main {
+#theme.themeGreen .CodeMirror-sizer {
   color: #000000;
 }
 
@@ -223,13 +235,26 @@
   border: 1px solid #DDDDDD;
 }
 
-#theme.themeGreen #oldText, #theme.themeGreen #newText, #theme.themeGreen #diffedText {
+#theme.themeGreen .CodeMirror-gutters {
+  background: #F4FFEF;
+  border-right: 1px solid #DDDDDD;
+}
+
+#theme.themeGreen .CodeMirror-linenumber {
+  color: #999999;
+}
+
+#theme.themeGreen .CodeMirror, #theme.themeGreen #diffedText {
   background: #FBFFF8;
   border: 1px solid #DDDDDD;
 }
 /* theme black */
 #theme.themeBlack {
   background: #2B2B2B;
+}
+
+#theme.themeBlack .CodeMirror-sizer {
+  color: #DCDCBA;
 }
 
 #theme.themeBlack #main {
@@ -267,7 +292,16 @@
   border: 1px solid #000000;
 }
 
-#theme.themeBlack #oldText, #theme.themeBlack #newText, #theme.themeBlack #diffedText {
+#theme.themeBlack .CodeMirror-gutters {
+  background: #616161;
+  border-right: 1px solid #333333;
+}
+
+#theme.themeBlack .CodeMirror-linenumber {
+  color: #BABA98;
+}
+
+#theme.themeBlack .CodeMirror, #theme.themeBlack #diffedText {
   background: #3F3F3F;
   border: 1px solid #000000;
 }

@@ -1,25 +1,29 @@
+require('codemirror/mode/javascript/javascript');
+require('codemirror/mode/xml/xml');
+require('codemirror/mode/markdown/markdown');
+
 import React from 'react';
 import {connect} from 'react-redux';
+import Codemirror from 'react-codemirror';
 import Resizable from 'react-resizable-box';
 
 const hideRender = () => {
 
 };
 
+let options = {
+  mode: 'text/html',
+  lineNumbers: true,
+  lineWrapping: true
+};
+
 const render = (state) => {
-  let arr = state.pager.newText.split('\r\n');
   let name = state.pager.newTextName;
   let currentPage = '-' + state.pager.currentPage;
-  let output = arr.map((line, idx) => {
-    if ('' === line) {
-      return;
-    }
-    return <div key={idx}>{line}</div>;
-  });
   return (
     <span id="newRender">
       <div id="newTitle">{name}{currentPage}<div className="closeRender">+</div></div>
-      <div id="newText">{output}</div>
+      <Codemirror id="newC" value={state.pager.newText} options={options} readonly="readonly"/>
     </span>
   );
 };
