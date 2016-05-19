@@ -108,11 +108,15 @@
   font-size: 18px;
 }
 
-.CodeMirror, .CodeMirror, #diffedText {
+.CodeMirror, #diffedText {
   font-size: 20px;
   overflow-x: hidden;
   overflow-y: auto;
   height: 95%;
+}
+
+.CodeMirror pre {
+  position: static;
 }
 
 #oldTitle, .CodeMirror {
