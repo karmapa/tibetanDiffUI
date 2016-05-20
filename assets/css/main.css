@@ -115,10 +115,6 @@
   height: 95%;
 }
 
-.CodeMirror pre {
-  position: static;
-}
-
 #oldTitle, .CodeMirror {
   box-shadow: 0px 4px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 3px 0 rgba(0, 0, 0, 0.09);
 }
@@ -203,6 +199,13 @@
   border: 1px solid #DDDDDD;
 }
 
+#theme.themeDefault .CodeMirror-selected { 
+  background: #D9D9D9; 
+}
+
+#theme.themeDefault .CodeMirror-focused .CodeMirror-selected { 
+  background: #AAD6FF; 
+}
 /* theme green */
 #theme.themeGreen {
   background: #EFF2E4;
@@ -251,6 +254,14 @@
 #theme.themeGreen .CodeMirror, #theme.themeGreen #diffedText {
   background: #FBFFF8;
   border: 1px solid #DDDDDD;
+}
+
+#theme.themeGreen .CodeMirror-selected { 
+  background: #D9D9D9; 
+}
+
+#theme.themeGreen .CodeMirror-focused .CodeMirror-selected { 
+  background: #AAD6FF; 
 }
 /* theme black */
 #theme.themeBlack {
@@ -308,4 +319,12 @@
 #theme.themeBlack .CodeMirror, #theme.themeBlack #diffedText {
   background: #3F3F3F;
   border: 1px solid #000000;
+}
+
+#theme.themeBlack .CodeMirror-selected { 
+  background: #818593; 
+}
+
+#theme.themeBlack .CodeMirror-focused .CodeMirror-selected { 
+  background: #5D88B3; 
 }
