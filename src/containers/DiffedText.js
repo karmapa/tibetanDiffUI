@@ -17,10 +17,11 @@ const diff = (oldText, newText) => {
 };
 
 const render = (state) => {
-  let arr = diff(state.pager.oldText, state.pager.newText);
+  let newTextNoLinebreak = state.pager.newText.replace(/\r\n/g, '');
+  let arr = diff(state.pager.oldText, newTextNoLinebreak);
   let output = arr.map((word, idx) => {
     if ('black' !== word[0] && (word[1].match(/[\u0f0b-\u0f12]/) || word[1].match(/^[\s]+$/))) {
-      return;
+      return <span key={idx} id="diffedDrawBlack" >{word[1]}</span>;
     }
     let color = 'diffedDrawBlack';
     if ('green' === word[0]) {
