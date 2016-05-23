@@ -4,6 +4,7 @@
   "description": "tibetan diff ui",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint *.js",
     "start": "webpack-dev-server --progress --colors --hot --inline"
   },
   "repository": {
@@ -22,7 +23,7 @@
     "diff": "2.2.2",
     "react": "15.0.1",
     "react-bootstrap": "0.29.2",
-    "react-codemirror": "0.2.6",
+    "react-codemirror": "https://github.com/rickie120243/react-codemirror.git#debounce-for-multiple-codemirror",
     "react-dom": "15.0.1",
     "react-redux": "4.4.5",
     "react-resizable-box": "1.2.0",
