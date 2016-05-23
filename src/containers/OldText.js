@@ -3,7 +3,7 @@ require('codemirror/mode/xml/xml');
 
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Codemirror from 'react-codemirror';
+import CodeMirror from 'react-codemirror';
 import Resizable from 'react-resizable-box';
 
 class OldTextContainer extends Component {
@@ -31,7 +31,7 @@ class OldTextContainer extends Component {
       <Resizable width="33%" minWidth={100} isResizable={{top:false, right:true, bottom:false, left:false, topRight:false, bottomRight:false, bottomLeft:false, topLeft:false}}>
         <span id="oldRender">
           <div id="oldTitle">{name}{currentPage}<div className="closeRender">+</div></div>
-          <Codemirror value={this.props.pager.oldText} options={this.state.options} />
+          <CodeMirror value={this.props.pager.oldText} options={this.state.options} />
         </span>
       </Resizable>
     );
