@@ -1,5 +1,8 @@
+require('codemirror/mode/xml/xml');
+
 import React from 'react';
 import {connect} from 'react-redux';
+import CodeMirror from 'react-codemirror';
 import * as JsDiff from 'diff';
 import Resizable from 'react-resizable-box';
 
@@ -14,6 +17,13 @@ const diff = (oldText, newText) => {
     }
     return ['black', part.value];
   });
+};
+
+let options = {
+  mode: 'object',
+  lineNumbers: true,
+  lineWrapping: true,
+  readOnly: true
 };
 
 const render = (state) => {
@@ -36,6 +46,7 @@ const render = (state) => {
       <span id="diffedRender">
         <div id="diffedTitle">Diffed<div className="closeRender">+</div></div>
         <div id="diffedText">{output}</div>
+
       </span>
     </Resizable>
   );
