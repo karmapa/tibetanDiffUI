@@ -8,7 +8,9 @@ export default class ShowDiff extends Component {
     return (
       <div id="main">
         <OldText />
+        <span className="resizeBar"></span>
         <NewText />
+        <span className="resizeBar"></span>
         <DiffedText />
       </div>
     );
