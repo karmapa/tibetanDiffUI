@@ -11,7 +11,6 @@ class OldTextContainer extends Component {
         mode: 'text',
         lineNumbers: true,
         lineWrapping: true,
-        matchBrackets: true,
         readOnly: true
       }
     };
