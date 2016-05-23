@@ -1,6 +1,3 @@
-require('codemirror/mode/javascript/javascript');
-require('codemirror/mode/xml/xml');
-
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import CodeMirror from 'react-codemirror';
@@ -11,7 +8,7 @@ class NewTextContainer extends Component {
     super();
     this.state = {
       options: {
-        mode: 'text/html',
+        mode: 'text',
         lineNumbers: true,
         lineWrapping: true,
         matchBrackets: true,
