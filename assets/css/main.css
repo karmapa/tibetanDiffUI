@@ -111,7 +111,7 @@
 }
 
 .ReactCodeMirror {
-  height: 100%;
+  height: calc(100% - 30px);
 }
 
 #oldTitle, #newTitle, #diffedTitle {
@@ -124,7 +124,7 @@
   font-size: 20px;
   overflow-x: hidden;
   overflow-y: auto;
-  height: calc(100% - 30px);
+  height: 100%;
 }
 
 #oldTitle, .CodeMirror {
