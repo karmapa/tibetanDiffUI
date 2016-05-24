@@ -99,10 +99,8 @@
   height: 100%;
   cursor: col-resize;
   resize: horizontal;
-  background: #DDDDDD;
   border-top-style: solid;
   border-bottom-style: solid;
-  border-color: #DDDDDD;
 }
 
 #oldRender, #newRender, #diffedRender {
@@ -199,6 +197,11 @@
   background-color: #F9F9F9;
 }
 
+#theme.themeDefault .resizeBar {
+  background: #DDDDDD;
+  border-color: #DDDDDD;
+}
+
 #theme.themeDefault #oldTitle, #theme.themeDefault #newTitle, #theme.themeDefault #diffedTitle {
   background: #F7F7F7;
   border: 1px solid #DDDDDD;
@@ -253,6 +256,15 @@
 #theme.themeGreen #themeDropdown:hover, .open > #theme.themeGreen #themeDropdown:hover, .open > #theme.themeGreen #themeDropdown:focus {
   color: #000000;
   background-color: #E3EEDE;
+  border-color: #DDDDDD;
+}
+
+#theme.themeGreen .dropdown-menu {
+  background-color: #F9F9F9;
+}
+
+#theme.themeGreen .resizeBar {
+  background: #DDDDDD;
   border-color: #DDDDDD;
 }
 
@@ -319,6 +331,11 @@
 
 #theme.themeBlack .dropdown-menu {
   background-color: #555555;
+}
+
+#theme.themeBlack .resizeBar {
+  background: #2B2B2B;
+  border-color: #2B2B2B;
 }
 
 #theme.themeBlack #oldTitle, #theme.themeBlack #newTitle, #theme.themeBlack #diffedTitle {
