@@ -154,10 +154,6 @@
   cursor: pointer;
 }
 
-#diffedDrawGreen {
-  background: #8BCE4D;
-}
-
 #diffedDrawRed {
   background: #FF4949;
 }
@@ -227,6 +223,10 @@
 #theme.themeDefault .CodeMirror-focused .CodeMirror-selected { 
   background: #AAD6FF; 
 }
+
+#theme.themeDefault #diffedDrawGreen {
+  background: #8BCE4D;
+}
 /* theme green */
 #theme.themeGreen {
   background: #EFF2E4;
@@ -292,6 +292,10 @@
 
 #theme.themeGreen .CodeMirror-focused .CodeMirror-selected { 
   background: #AAD6FF; 
+}
+
+#theme.themeGreen #diffedDrawGreen {
+  background: #8BCE4D;
 }
 /* theme black */
 #theme.themeBlack {
@@ -362,4 +366,8 @@
 
 #theme.themeBlack .CodeMirror-focused .CodeMirror-selected { 
   background: #5D88B3; 
+}
+
+#theme.themeBlack #diffedDrawGreen {
+  background: #478A09;
 }
