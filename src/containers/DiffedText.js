@@ -25,21 +25,31 @@ let options = {
   lineWrapping: true,
   readOnly: true
 };
-
 const render = (state) => {
   let newTextNoLinebreak = state.pager.newText.replace(/\r\n/g, '');
   let arr = diff(state.pager.oldText, newTextNoLinebreak);
   let output = arr.map((word, idx) => {
-    if ('black' !== word[0] && (word[1].match(/[\u0f0b-\u0f12]/) || word[1].match(/^[\s]+$/))) {
-      return <span key={idx} id="diffedDrawBlack" >{word[1]}</span>;
+    if ('black' !== word[0] && (word[1].match(/[\u0f0b-\u0f12]/) || word[1].match(/^[ ]+$/))) {
+      return <span key={idx} id="diffedDrawBlack">{word[1]}</span>;
     }
-    let color = 'diffedDrawBlack';
+    let diffedDrawBlack = 'diffedDrawBlack';
+    let color = diffedDrawBlack;
     if ('green' === word[0]) {
       color = 'diffedDrawGreen';
     } else if ('red' === word[0]) {
       color = 'diffedDrawRed';
     }
-    return <span key={idx} id={color} >{word[1]}</span>;
+    if (word[1].match(/^[\r\n]+$/)) {
+      return <div key={idx + 50}></div>;
+    } else if (word[1].match(/^[\r\n]+/)) {
+      return <span key={idx + 100}><div key={idx + 50}></div><span key={idx} id={color} >{word[1]}</span></span>;
+    } else if (word[1].match(/[\r\n]+$/)) {
+      return <span key={idx + 100}><span key={idx} id={color} >{word[1]}</span><div key={idx + 50}></div></span>;
+    } else if (word[1].match(/^[\r\n]+$/)) {
+      return <div key={idx + 50}></div>;
+    } else {
+      return <span key={idx + 100}><span key={idx} id={color} >{word[1]}</span></span>;
+    }
   });
   return (
     <Resizable width="33%" minWidth={100} height="100%" isResizable={{top:false, right:false, bottom:false, left:true, topRight:false, bottomRight:false, bottomLeft:false, topLeft:false}}>
