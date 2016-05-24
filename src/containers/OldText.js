@@ -24,7 +24,7 @@ class OldTextContainer extends Component {
     let name = this.props.pager.oldTextName;
     let currentPage = '-' + this.props.pager.currentPage;
     return (
-      <Resizable width="33%" minWidth={100} isResizable={{top:false, right:true, bottom:false, left:false, topRight:false, bottomRight:false, bottomLeft:false, topLeft:false}}>
+      <Resizable width="33%" minWidth={100} height="100%" isResizable={{top:false, right:true, bottom:false, left:false, topRight:false, bottomRight:false, bottomLeft:false, topLeft:false}}>
         <span id="oldRender">
           <div id="oldTitle">{name}{currentPage}<div className="closeRender">+</div></div>
           <CodeMirror value={this.props.pager.oldText} options={this.state.options} />

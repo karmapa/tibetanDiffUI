@@ -1,4 +1,4 @@
-require('codemirror/mode/xml/xml');
+require('codemirror/mode/jsx/jsx');
 
 import React from 'react';
 import {connect} from 'react-redux';
@@ -20,7 +20,7 @@ const diff = (oldText, newText) => {
 };
 
 let options = {
-  mode: 'object',
+  mode: 'text/jsx',
   lineNumbers: true,
   lineWrapping: true,
   readOnly: true
@@ -46,7 +46,6 @@ const render = (state) => {
       <span id="diffedRender">
         <div id="diffedTitle">Diffed<div className="closeRender">+</div></div>
         <div id="diffedText">{output}</div>
-
       </span>
     </Resizable>
   );
