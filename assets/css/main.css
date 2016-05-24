@@ -120,11 +120,18 @@
   height: 30px;
 }
 
-.CodeMirror, #diffedText {
+.CodeMirror {
   font-size: 20px;
   overflow-x: hidden;
   overflow-y: auto;
   height: 100%;
+}
+
+#diffedText {
+  font-size: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100% - 30px);
 }
 
 #oldTitle, .CodeMirror {
