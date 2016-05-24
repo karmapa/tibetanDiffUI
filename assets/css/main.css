@@ -94,7 +94,7 @@
 }
 
 .resizeBar {
-  width: 0.43em;
+  width: 0.3em;
   height: 100%;
   cursor: col-resize;
   resize: horizontal;
