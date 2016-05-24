@@ -1,8 +1,5 @@
-require('codemirror/mode/jsx/jsx');
-
 import React from 'react';
 import {connect} from 'react-redux';
-import CodeMirror from 'react-codemirror';
 import * as JsDiff from 'diff';
 import Resizable from 'react-resizable-box';
 
@@ -19,12 +16,6 @@ const diff = (oldText, newText) => {
   });
 };
 
-let options = {
-  mode: 'text/jsx',
-  lineNumbers: true,
-  lineWrapping: true,
-  readOnly: true
-};
 const render = (state) => {
   let newTextNoLinebreak = state.pager.newText.replace(/\r\n/g, '');
   let arr = diff(state.pager.oldText, newTextNoLinebreak);
