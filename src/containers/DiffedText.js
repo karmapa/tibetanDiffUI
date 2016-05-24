@@ -33,11 +33,11 @@ const render = (state) => {
     if (word[1].match(/^[\r\n]+$/)) {
       return <div key={idx + 50}></div>;
     } else if (word[1].match(/^[\r\n]+/)) {
+      word[1] = word[1].replace(/[\r\n]/, '');
       return <span key={idx + 100}><div key={idx + 50}></div><span key={idx} id={color} >{word[1]}</span></span>;
     } else if (word[1].match(/[\r\n]+$/)) {
+      word[1] = word[1].replace(/[\r\n]/, '');
       return <span key={idx + 100}><span key={idx} id={color} >{word[1]}</span><div key={idx + 50}></div></span>;
-    } else if (word[1].match(/^[\r\n]+$/)) {
-      return <div key={idx + 50}></div>;
     } else {
       return <span key={idx + 100}><span key={idx} id={color} >{word[1]}</span></span>;
     }
