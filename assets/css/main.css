@@ -29,6 +29,10 @@
   padding-right: 5.8em;
 }
 
+button, input:focus {
+  outline: none;
+}
+
 #pageInput {
   padding-bottom: 0.24em;
   text-align: center;
@@ -184,6 +188,10 @@
   border: 0.07em solid #BBBBBB;
 }
 
+#theme.themeDefault #pageSelectLeft:hover, #theme.themeDefault #pageSelectRight:hover {
+  background-color: #F7F7F7;
+}
+
 #theme.themeDefault #themeDropdown {
   color: #000000;
   background-color: #FFFFFF;
@@ -267,6 +275,10 @@
   border: 0.07em solid #DDDDDD;
 }
 
+#theme.themeGreen #pageSelectLeft:hover, #theme.themeGreen #pageSelectRight:hover {
+  background-color: #E3EEDE;
+}
+
 #theme.themeGreen #themeDropdown {
   color: #000000;
   background-color: #F4FFEF;
@@ -291,6 +303,19 @@
 #theme.themeGreen #oldTitle, #theme.themeGreen #newTitle, #theme.themeGreen #diffedTitle {
   background: #F4FFEF;
   border: 0.07em solid #DDDDDD;
+}
+
+#theme.themeGreen #oldTitle:hover, #theme.themeGreen #newTitle:hover, #theme.themeGreen #diffedTitle:hover {
+  background: #E8F4E4;
+}
+
+#theme.themeGreen .titleClose {
+  background: #E8F4E4;
+  border: 0.07em solid #DDDDDD;
+}
+
+#theme.themeGreen .titleClose:hover {
+  background: #F4FFEF;
 }
 
 #theme.themeGreen .CodeMirror-gutters {
@@ -337,19 +362,23 @@
 
 #theme.themeBlack #pageSelectLeft, #theme.themeBlack #pageSelectRight {
   color: #DCDCBA;
-  background-color: #464545;
+  background-color: #666666;
   border: 0.07em solid #333333;
+}
+
+#theme.themeBlack #pageSelectLeft:hover, #theme.themeBlack #pageSelectRight:hover {
+  background-color: #545454;
 }
 
 #theme.themeBlack #themeDropdown {
   color: #DCDCBA;
-  background-color: #464545;
+  background-color: #666666;
   border-color: #1F1F1F;
 }
 
 #theme.themeBlack #themeDropdown:hover, .open > #theme.themeBlack #themeDropdown:hover, .open > #theme.themeBlack #themeDropdown:focus {
   color: #DCDCBA;
-  background-color: #605E5E;
+  background-color: #545454;
   border-color: #1F1F1F;
 }
 
@@ -363,17 +392,30 @@
 }
 
 #theme.themeBlack #oldTitle, #theme.themeBlack #newTitle, #theme.themeBlack #diffedTitle {
-  background: #616161;
+  background: #666666;
   border: 0.07em solid #000000;
 }
 
+#theme.themeBlack #oldTitle:hover, #theme.themeBlack #newTitle:hover, #theme.themeBlack #diffedTitle:hover {
+  background: #545454;
+}
+
+#theme.themeBlack .titleClose {
+  background: #545454;
+  border: 0.07em solid #000000;
+}
+
+#theme.themeBlack .titleClose:hover {
+  background: #666666;
+}
+
 #theme.themeBlack .CodeMirror-gutters {
-  background: #616161;
+  background: #666666;
   border-right: 0.07em solid #333333;
 }
 
 #theme.themeBlack .CodeMirror-linenumber {
-  color: #BABA98;
+  color: #DCDCBA;
 }
 
 #theme.themeBlack .CodeMirror, #theme.themeBlack #diffedText {
