@@ -113,8 +113,22 @@
 
 #oldTitle, #newTitle, #diffedTitle {
   padding-left: 0.29em;
+  padding-top: 0.2em;
   font-size: 1.05em;
   height: 1.8em;
+  cursor: pointer;
+}
+
+.titleClose {
+  writing-mode: vertical-rl;
+  padding-top: 0.3em;
+  height: 100%;
+  font-size: 1.05em;
+  cursor: pointer;
+}
+
+#newTitleClose {
+  height: auto;
 }
 
 .CodeMirror {
@@ -147,12 +161,6 @@
   flex: 1;
 }
 
-.closeRender {
-  font-size: 1.2em; 
-  display: inline;
-  padding-left: 0.14em;
-  cursor: pointer;
-}
 
 #diffedDrawRed {
   background: #FF4949;
@@ -200,6 +208,19 @@
 #theme.themeDefault #oldTitle, #theme.themeDefault #newTitle, #theme.themeDefault #diffedTitle {
   background: #F7F7F7;
   border: 0.07em solid #DDDDDD;
+}
+
+#theme.themeDefault #oldTitle:hover, #theme.themeDefault #newTitle:hover, #theme.themeDefault #diffedTitle:hover {
+  background: #EBEBEB;
+}
+
+#theme.themeDefault .titleClose {
+  background: #EBEBEB;
+  border: 0.07em solid #DDDDDD;
+}
+
+#theme.themeDefault .titleClose:hover {
+  background: #F7F7F7;
 }
 
 #theme.themeDefault .CodeMirror-gutters {
