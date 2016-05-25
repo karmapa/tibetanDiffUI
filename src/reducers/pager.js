@@ -17,7 +17,11 @@ const initialState = {
   newText: newText[newTextName][oldPages[0]],
   pageInput: oldPages[0],
   wrongPageInput: false,
-  themeStyle: 'themeDefault'
+  themeStyle: 'themeDefault',
+  paneOldText: true,
+  paneNewText: true,
+  paneDiffedText: true,
+  openPane: 3
 };
 
 const reducer = (state = initialState, action) => {
@@ -89,6 +93,63 @@ const reducer = (state = initialState, action) => {
         ...state,
         themeStyle: 'theme' + action.style
       };
+    case 'CLOSEOLDTEXT':
+      if (!state.paneDiffedText && !state.paneNewText) {
+        return {
+          ...state,
+          paneOldText: true
+        };
+      } else if (true === state.paneOldText) {
+        return {
+          ...state,
+          openPane: --state.openPane,
+          paneOldText: !state.paneOldText
+        };
+      } else {
+        return {
+          ...state,
+          openPane: ++state.openPane,
+          paneOldText: !state.paneOldText
+        };
+      }
+    case 'CLOSENEWTEXT':
+      if (!state.paneDiffedText && !state.paneOldText) {
+        return {
+          ...state,
+          paneNewText: true
+        };
+      } else if (true === state.paneNewText) {
+        return {
+          ...state,
+          openPane: --state.openPane,
+          paneNewText: !state.paneNewText
+        };
+      } else {
+        return {
+          ...state,
+          openPane: ++state.openPane,
+          paneNewText: !state.paneNewText
+        };
+      }
+    case 'CLOSEDIFFEDTEXT':
+      if (!state.paneNewText && !state.paneOldText) {
+        return {
+          ...state,
+          paneDiffedText: true
+        };
+      } else if (true === state.paneDiffedText) {
+        return {
+          ...state,
+          openPane: --state.openPane,
+          paneDiffedText: !state.paneDiffedText
+        };
+      } else {
+        return {
+          ...state,
+          openPane: ++state.openPane,
+          paneDiffedText: !state.paneDiffedText
+        };
+      }
     default:
       return state;
   }
@@ -126,5 +187,23 @@ export function themeSwitch(style) {
   return {
     type: 'THEMESWITCH',
     style: style
+  };
+}
+
+export function closeOldText() {
+  return {
+    type: 'CLOSEOLDTEXT'
+  };
+}
+
+export function closeNewText() {
+  return {
+    type: 'CLOSENEWTEXT'
+  };
+}
+
+export function closeDiffedText() {
+  return {
+    type: 'CLOSEDIFFEDTEXT'
   };
 }

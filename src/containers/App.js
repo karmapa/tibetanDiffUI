@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PageSelector from './PageSelector.js';
 import ThemeSelector from './ThemeSelector.js';
 import {connect} from 'react-redux';
-import Diff from '../components/Diff.js';
+import Diff from './Diff.js';
 
 class AppContainer extends Component {
   render() {

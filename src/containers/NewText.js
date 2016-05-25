@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import store from '../store/store.js';
+import {closeNewText} from '../reducers/pager.js';
 import CodeMirror from 'react-codemirror';
-import Resizable from 'react-resizable-box';
 
 class NewTextContainer extends Component {
   constructor() {
@@ -16,19 +17,31 @@ class NewTextContainer extends Component {
     };
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.pager.currentPage !== this.props.pager.currentPage;
+//  shouldComponentUpdate(nextProps, nextState) {
+//    return (
+//      (nextProps.pager.currentPage !== this.props.pager.currentPage) || (nextProps.pager.paneNewText !== this.props.pager.paneNewText)
+//    );
+//  }
+
+  paneClose() {
+    store.dispatch(closeNewText());
   }
 
   render() {
     let name = this.props.pager.newTextName;
     let currentPage = '-' + this.props.pager.currentPage;
-    return (
-        <span id="oldRender">
-          <div id="oldTitle">{name}{currentPage}<div className="closeRender">+</div></div>
-          <CodeMirror value={this.props.pager.newText} options={this.state.options} />
-        </span>
-    );
+    if (this.props.pager.paneNewText) {
+      return (
+          <span id="oldRender">
+            <div id="oldTitle" onClick={this.paneClose}>{name}{currentPage}-</div>
+            <CodeMirror value={this.props.pager.newText} options={this.state.options} />
+          </span>
+      );
+    } else {
+      return (
+        <span id="newTitleClose" className="titleClose" onClick={this.paneClose}>+{name}{currentPage}</span>
+      );
+    }
   }
 }
 
