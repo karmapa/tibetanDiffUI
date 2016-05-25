@@ -43,6 +43,16 @@ class DiffedTextContainer extends Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      (nextProps.pager.currentPage !== this.props.pager.currentPage) ||
+      (nextProps.pager.paneOldText !== this.props.pager.paneOldText) ||
+      (nextProps.pager.paneNewText !== this.props.pager.paneNewText) ||
+      (nextProps.pager.paneDiffedText !== this.props.pager.paneDiffedText) ||
+      (nextProps.pager.openPane !== this.props.pager.openPane)
+    );
+  }
+
   paneClose() {
     store.dispatch(closeDiffedText());
   }
@@ -62,7 +72,7 @@ class DiffedTextContainer extends Component {
         );
       } else {
         return (
-          <Resizable width="" minWidth={100} height="100%" isResizable={{top:false, right:false, bottom:false, left:resizable, topRight:false, bottomRight:false, bottomLeft:false, topLeft:false}}>
+          <Resizable width="33%" minWidth={100} height="100%" isResizable={{top:false, right:false, bottom:false, left:resizable, topRight:false, bottomRight:false, bottomLeft:false, topLeft:false}}>
             <span id="diffedRender">
                 <div id="diffedTitle" onClick={this.paneClose}>Diffed-</div>
               <div id="diffedText">{output}</div>

@@ -10,12 +10,12 @@ export default class ShowDiffContainer extends Component {
     let resizeBarRight = <span className="resizeBar"></span>;
     if (1 === this.props.pager.openPane) {
       resizeBarLeft = '';
-      resizeBarRight = ''; 
+      resizeBarRight = '';
     } else if (!this.props.pager.paneOldText) {
       resizeBarLeft = '';
     } else if (!this.props.pager.paneDiffedText || !this.props.pager.paneNewText) {
       resizeBarRight = '';
-    } 
+    }
     return (
       <div id="main">
         <OldText />

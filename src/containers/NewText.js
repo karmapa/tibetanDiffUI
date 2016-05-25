@@ -17,11 +17,15 @@ class NewTextContainer extends Component {
     };
   }
 
-//  shouldComponentUpdate(nextProps, nextState) {
-//    return (
-//      (nextProps.pager.currentPage !== this.props.pager.currentPage) || (nextProps.pager.paneNewText !== this.props.pager.paneNewText)
-//    );
-//  }
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      (nextProps.pager.currentPage !== this.props.pager.currentPage) ||
+      (nextProps.pager.paneOldText !== this.props.pager.paneOldText) ||
+      (nextProps.pager.paneNewText !== this.props.pager.paneNewText) ||
+      (nextProps.pager.paneDiffedText !== this.props.pager.paneDiffedText) ||
+      (nextProps.pager.openPane !== this.props.pager.openPane)
+    );
+  }
 
   paneClose() {
     store.dispatch(closeNewText());
