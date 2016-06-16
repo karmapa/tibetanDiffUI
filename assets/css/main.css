@@ -18,6 +18,7 @@
 }
 
 #titleRight {
+  display: inline;
   flex: 5;
   text-align: right;
   padding-top: 0.4em;
@@ -29,7 +30,7 @@
   padding-right: 5.8em;
 }
 
-button, input:focus {
+button, #importButton, input:focus {
   outline: none;
 }
 
@@ -52,6 +53,24 @@ button, input:focus {
 #pageSelectLeft, #pageSelectRight {
   width: 2.45em;
   height: 2.31em;
+}
+
+#importer {
+  display: inline;
+}
+
+.btn-toolbar {
+  display: inline;
+  padding-right: 1em;
+}
+
+#importButton {
+  float: unset;
+}
+
+.static-modal {
+  text-align: left;
+  display: none;
 }
 
 #themeSelector {
@@ -165,7 +184,6 @@ button, input:focus {
   flex: 1;
 }
 
-
 #diffedDrawRed {
   background: #FF4949;
 }
@@ -192,13 +210,13 @@ button, input:focus {
   background-color: #F7F7F7;
 }
 
-#theme.themeDefault #themeDropdown {
+#theme.themeDefault #themeDropdown, #theme.themeDefault #importButton {
   color: #000000;
   background-color: #FFFFFF;
   border-color: #BBBBBB;
 }
 
-#theme.themeDefault #themeDropdown:hover, .open > #theme.themeDefault #themeDropdown:hover, .open > #theme.themeDefault #themeDropdown:focus {
+#theme.themeDefault #themeDropdown:hover, .open > #theme.themeDefault #themeDropdown:hover, .open > #theme.themeDefault #themeDropdown:focus, #theme.themeDefault #importButton:hover, #theme.themeDefault #importButton:focus {
   color: #000000;
   background-color: #F7F7F7;
   border-color: #616161;
