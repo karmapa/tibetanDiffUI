@@ -308,13 +308,13 @@ button, #importButton, input:focus {
   background-color: #E3EEDE;
 }
 
-#theme.themeGreen #themeDropdown {
+#theme.themeGreen #themeDropdown, #theme.themeGreen #importButton {
   color: #000000;
   background-color: #F4FFEF;
   border-color: #DDDDDD;
 }
 
-#theme.themeGreen #themeDropdown:hover, .open > #theme.themeGreen #themeDropdown:hover, .open > #theme.themeGreen #themeDropdown:focus {
+#theme.themeGreen #themeDropdown:hover, .open > #theme.themeGreen #themeDropdown:hover, .open > #theme.themeGreen #themeDropdown:focus, #theme.themeGreen #importButton:hover, #theme.themeGreen #importButton:focus {
   color: #000000;
   background-color: #E3EEDE;
   border-color: #DDDDDD;
@@ -399,13 +399,13 @@ button, #importButton, input:focus {
   background-color: #545454;
 }
 
-#theme.themeBlack #themeDropdown {
+#theme.themeBlack #themeDropdown, #theme.themeBlack #importButton {
   color: #DCDCBA;
   background-color: #666666;
   border-color: #1F1F1F;
 }
 
-#theme.themeBlack #themeDropdown:hover, .open > #theme.themeBlack #themeDropdown:hover, .open > #theme.themeBlack #themeDropdown:focus {
+#theme.themeBlack #themeDropdown:hover, .open > #theme.themeBlack #themeDropdown:hover, .open > #theme.themeBlack #themeDropdown:focus, #theme.themeBlack #importButton:hover, #theme.themeBlack #importButton:focus {
   color: #DCDCBA;
   background-color: #545454;
   border-color: #1F1F1F;
