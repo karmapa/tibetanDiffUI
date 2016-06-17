@@ -14,9 +14,9 @@ class AppContainer extends Component {
             <div id="logoTitle">經文比對系統</div>
           </span>
           <div id="titleRight">
-            <DataImport />
             <PageSelector />
             <ThemeSelector />
+            <DataImport />
           </div>
         </header>
         <Diff />

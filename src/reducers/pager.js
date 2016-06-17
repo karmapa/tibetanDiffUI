@@ -16,6 +16,7 @@ const initialState = {
   newTextName: newTextName,
   newText: newText[newTextName][oldPages[0]],
   pageInput: oldPages[0],
+  importModalControl: false,
   wrongPageInput: false,
   themeStyle: 'themeDefault',
   paneOldText: true,
@@ -150,6 +151,27 @@ const reducer = (state = initialState, action) => {
           paneDiffedText: !state.paneDiffedText
         };
       }
+    case 'IMPORTMODALCONTROL':
+      if ('open' === action.mode) {
+        return {
+          ...state,
+          importModalControl: true
+        };
+      } else if ('close' === action.mode) {
+        return {
+          ...state,
+          importModalControl: false
+        };
+      } else if (2 === action.mode) {
+        return {
+          ...state,
+          importModalControl: false
+        };
+      } else {
+        return {
+          ...state,
+        };
+      }
     default:
       return state;
   }
@@ -205,5 +227,12 @@ export function closeNewText() {
 export function closeDiffedText() {
   return {
     type: 'CLOSEDIFFEDTEXT'
+  };
+}
+
+export function importModalControl(mode) {
+  return {
+    type: 'IMPORTMODALCONTROL',
+    mode: mode
   };
 }

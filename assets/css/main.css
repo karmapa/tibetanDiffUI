@@ -61,16 +61,27 @@ button, #importButton, input:focus {
 
 .btn-toolbar {
   display: inline;
-  padding-right: 1em;
+  padding-left: 1em;
 }
 
 #importButton {
   float: unset;
 }
 
-.static-modal {
+#importModal {
   text-align: left;
+}
+
+.modalOpen {
+
+}
+
+.modalClose {
   display: none;
+}
+
+#oldFileImport, #newFileImport {
+  padding-bottom: 1em;
 }
 
 #themeSelector {
