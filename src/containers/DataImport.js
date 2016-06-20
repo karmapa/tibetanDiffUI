@@ -54,6 +54,7 @@ class DataImportContainer extends Component {
               <input type="file" id="newFileImport" onChange={this.dataImport} />
             </Modal.Body>
             <Modal.Footer>
+              <Button onClick={() => {this.doImportModalControl('remove');}}>Remove Import</Button>
               <Button onClick={() => {this.doImportModalControl('cancel');}}>Cancel</Button>
               <Button bsStyle="primary" onClick={() => {this.doImportModalControl('import');}}>Import</Button>
             </Modal.Footer>

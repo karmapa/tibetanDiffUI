@@ -15,9 +15,7 @@ const initialState = {
   pages: oldPages,
   warnNext: false,
   warnPre: false,
-  oldTextName: oldTextName,
   oldText: oldText[oldTextName][oldPages[0]],
-  newTextName: newTextName,
   newText: newText[newTextName][oldPages[0]],
   pageInput: oldPages[0],
   importModalControl: false,
@@ -164,6 +162,28 @@ const reducer = (state = initialState, action) => {
           ...state,
           importModalControl: true
         };
+      } else if ('remove' === action.mode) {
+        const oldTextName = Object.keys(oldText)[0];
+        const newTextName = Object.keys(newText)[0];
+        const oldPages = Object.keys(oldText[oldTextName]);
+        return {
+          ...state,
+          oldTextObj: oldText,
+          newTextObj: newText,
+          oldTextName: oldTextName,
+          newTextName: newTextName,
+          currentPage: oldPages[0],
+          pageNumber: 0,
+          pages: oldPages,
+          warnNext: false,
+          warnPre: false,
+          oldText: oldText[oldTextName][oldPages[0]],
+          newText: newText[newTextName][oldPages[0]],
+          pageInput: oldPages[0],
+          wrongPageInput: false,
+          getDateFromImport: false,
+          importModalControl: false
+        };
       } else if ('cancel' === action.mode) {
         return {
           ...state,
@@ -184,9 +204,7 @@ const reducer = (state = initialState, action) => {
           pages: oldImportPages,
           warnNext: false,
           warnPre: false,
-          oldTextName: oldImportTextName,
           oldText: state.oldImportObj[oldImportTextName][oldImportPages[0]],
-          newTextName: newImportTextName,
           newText: state.newImportObj[newImportTextName][oldImportPages[0]],
           pageInput: oldImportPages[0],
           wrongPageInput: false,
