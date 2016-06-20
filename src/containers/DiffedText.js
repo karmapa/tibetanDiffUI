@@ -58,7 +58,7 @@ class DiffedTextContainer extends Component {
   }
 
   render() {
-    let newTextNoLinebreak = this.props.pager.newText.replace(/\r\n/g, '');
+    let newTextNoLinebreak = this.props.pager.newText.replace(/\r?\n/g, '');
     let arr = this.diff(this.props.pager.oldText, newTextNoLinebreak);
     let output = arr.map(this.drawColor);
     let resizable = true;

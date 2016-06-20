@@ -6,6 +6,10 @@ const newTextName = Object.keys(newText)[0];
 const oldPages = Object.keys(oldText[oldTextName]);
 
 const initialState = {
+  oldTextObj: oldText,
+  newTextObj: newText,
+  oldTextName: oldTextName,
+  newTextName: newTextName,
   currentPage: oldPages[0],
   pageNumber: 0,
   pages: oldPages,
@@ -22,7 +26,10 @@ const initialState = {
   paneOldText: true,
   paneNewText: true,
   paneDiffedText: true,
-  openPane: 3
+  openPane: 3,
+  getDateFromImport: false,
+  oldImportObj: '',
+  newImportObj: ''
 };
 
 const reducer = (state = initialState, action) => {
@@ -41,8 +48,8 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false,
           pageNumber: state.pageNumber + 1,
           currentPage: state.pages[state.pageNumber + 1],
-          oldText: oldText[oldTextName][state.pages[state.pageNumber + 1]],
-          newText: newText[newTextName][state.pages[state.pageNumber + 1]],
+          oldText: state.oldTextObj[state.oldTextName][state.pages[state.pageNumber + 1]],
+          newText: state.newTextObj[state.newTextName][state.pages[state.pageNumber + 1]],
           pageInput: state.pages[state.pageNumber + 1]
         };
       }
@@ -60,8 +67,8 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false,
           pageNumber: state.pageNumber - 1,
           currentPage: state.pages[state.pageNumber - 1],
-          oldText: oldText[oldTextName][state.pages[state.pageNumber - 1]],
-          newText: newText[newTextName][state.pages[state.pageNumber - 1]],
+          oldText: state.oldTextObj[state.oldTextName][state.pages[state.pageNumber - 1]],
+          newText: state.newTextObj[state.newTextName][state.pages[state.pageNumber - 1]],
           pageInput: state.pages[state.pageNumber - 1]
         };
       }
@@ -76,8 +83,8 @@ const reducer = (state = initialState, action) => {
         return {
           ...state,
           pageNumber: state.pages.indexOf(state.pageInput),
-          oldText: oldText[oldTextName][state.pageInput],
-          newText: newText[newTextName][state.pageInput],
+          oldText: state.oldTextObj[state.oldTextName][state.pageInput],
+          newText: state.newTextObj[state.newTextName][state.pageInput],
           currentPage: state.pageInput,
           pageInput: state.pageInput,
           wrongPageInput: false
@@ -157,19 +164,54 @@ const reducer = (state = initialState, action) => {
           ...state,
           importModalControl: true
         };
-      } else if ('close' === action.mode) {
+      } else if ('cancel' === action.mode) {
         return {
           ...state,
           importModalControl: false
         };
-      } else if (2 === action.mode) {
+      } else if ('import' === action.mode) {
+        const oldImportTextName = Object.keys(state.oldImportObj)[0];
+        const newImportTextName = Object.keys(state.newImportObj)[0];
+        const oldImportPages = Object.keys(state.oldImportObj[oldImportTextName]);
         return {
           ...state,
+          oldTextObj: state.oldImportObj,
+          newTextObj: state.newImportObj,
+          oldTextName: oldImportTextName,
+          newTextName: newImportTextName,
+          currentPage: oldImportPages[0],
+          pageNumber: 0,
+          pages: oldImportPages,
+          warnNext: false,
+          warnPre: false,
+          oldTextName: oldImportTextName,
+          oldText: state.oldImportObj[oldImportTextName][oldImportPages[0]],
+          newTextName: newImportTextName,
+          newText: state.newImportObj[newImportTextName][oldImportPages[0]],
+          pageInput: oldImportPages[0],
+          wrongPageInput: false,
+          getDateFromImport: true,
           importModalControl: false
         };
       } else {
         return {
           ...state,
+        };
+      }
+    case 'FILEIMPORT':
+      if (0 === action.state) {
+        return {
+          ...state,
+          oldImportObj: action.obj
+        };
+      } else if (1 === action.state) {
+        return {
+          ...state,
+          newImportObj: action.obj
+        };
+      } else {
+        return {
+          ...state
         };
       }
     default:
@@ -234,5 +276,13 @@ export function importModalControl(mode) {
   return {
     type: 'IMPORTMODALCONTROL',
     mode: mode
+  };
+}
+
+export function fileImport(obj, state) {
+  return {
+    type: 'FILEIMPORT',
+    obj: obj,
+    state: state
   };
 }
