@@ -9,7 +9,15 @@ class DataImportContainer extends Component {
     store.dispatch(importModalControl(mode));
   }
 
-  dataImport() {
+  dataImport(e) {
+    let r = new FileReader;
+    console.log(r);
+    let file = e.target.files[0];
+    r.onload = () => {
+      let text = r.result;
+      console.log(text);
+    }
+    r.readAsText(file);
   }
 
   render() {
