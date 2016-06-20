@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {ButtonToolbar, Button, Modal, ProgressBar} from 'react-bootstrap';
+import {ButtonToolbar, Button, Modal} from 'react-bootstrap';
 import store from '../store/store.js';
 import {importModalControl, fileImport} from '../reducers/pager.js';
 import splitPb from '../processor/splitPb.js';
@@ -25,14 +25,13 @@ class DataImportContainer extends Component {
       } else if ('newFileImport' === fileState) {
         store.dispatch(fileImport(fileObj, 1));
       } else {
-        console.log('failed');
+        return {};
       }
     };
     r.readAsText(file);
   }
 
   render() {
-    console.log(this.props.pager);
     let modalDisplay = 'modalClose';
     if (true === this.props.pager.importModalControl) {
       modalDisplay = 'modalOpen';
