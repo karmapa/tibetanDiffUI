@@ -1,6 +1,7 @@
 # tibetanDiffUI
-tibetan diff ui 
+tibetan diff ui (char diff)
 
+![tibetanDiff-demo](https://raw.githubusercontent.com/karmapa/tibetanDiffUI/master/assets/img/tibetanDiff-demo.png)
 ##Usage
 ####build environment
 ```
