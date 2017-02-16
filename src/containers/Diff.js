@@ -4,7 +4,7 @@ import OldText from '../containers/OldText.js';
 import NewText from '../containers/NewText.js';
 import DiffedText from '../containers/DiffedText.js';
 
-export default class ShowDiffContainer extends Component {
+class ShowDiffContainer extends Component {
   render() {
     let resizeBarLeft = <span className="resizeBar"></span>;
     let resizeBarRight = <span className="resizeBar"></span>;
